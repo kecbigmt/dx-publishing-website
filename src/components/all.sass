@@ -1,0 +1,99 @@
+$primary-color: #1A54B8;
+$secondary-color: #D22E05;
+$surface-color: #FFFFFF;
+$background-color: #f2f2f2;
+
+$size-1: 2rem;
+$size-2: 1.8rem;
+$size-3: 1.6rem;
+$size-4: 1.4rem;
+$size-5: 1.2rem;
+$size-6: 1rem;
+$size-7: .8rem;
+$card-background-color: $surface-color;
+$background: $background-color;
+$card-shadow: none;
+
+@import "~bulma"
+
+body
+  background-color: $background
+
+main
+  max-width: 960px
+  margin-left: auto
+  margin-right: auto
+
+.icon-btn
+  background: none
+  border: none
+  
+button
+  &.navbar-item
+    background: none
+    border: none
+    font-size: $size-normal
+    color: $text
+    cursor: pointer
+    &:focus,
+    &:focus-within
+    &:hover,
+    &.is-active
+      background-color: $navbar-item-hover-background-color
+      color: $navbar-item-hover-color
+
+ul.carousel-list
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
+  display: flex
+  flex-direction: row
+  justify-content: center
+  li.carousel-item
+    list-style: none
+  li.carousel-item:nth-child(n+2)
+    margin-left: 1rem
+
+.book-image-figure
+  display: inline-block
+
+.book-image
+  width: 120px
+  height: 160px
+  object-fit: cover
+  border-radius: $radius
+
+.news-ul
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
+
+.news-li-thumbnail
+  width: 5rem
+  height: 5rem
+  object-fit: cover
+
+.news-li
+  text-decoration: none
+  border-radius: $radius
+
+.news-li-content
+  display: flex
+  flex-direction: row
+
+.news-li-content
+  > *:nth-child(n+2)
+    margin-left: 1rem
+
+.news-li-title
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: 2
+  overflow: hidden
+  color: $text
+
+.news-li-time
+  display: inline-block
+
+.section-footer
+  display: flex
+  flex-direction: row
+  justify-content: center
