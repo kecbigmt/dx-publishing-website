@@ -87,15 +87,47 @@ button
 
 // BookCarousel component
 ul.carousel-list
+  list-style: none
   margin-top: calc(#{$block-spacing} / 2)
   margin-bottom: calc(#{$block-spacing} / 2)
-  display: flex
-  flex-direction: row
-  justify-content: center
+  @include mobile
+    overflow-x: auto
+    white-space: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: none
+    scrollbar-width: none
+    width: 100vw
+    padding-left: 2rem
+    padding-right: 2rem
+    &::-webkit-scrollbar
+      display: none
+
   li.carousel-item
-    list-style: none
+    display: inline-block
+    a
+      display: inline-flex
+      flex-direction: column
+      color: $text
+      &:hover
+        color: $link
+      .book-info
+        width: 150px
+        margin-top: 4px
+        span.book-price
+          font-size: $size-normal
+        span.book-title
+          margin-top: 4px
+          font-size: $size-small
+          font-weight: $weight-semibold
+          display: -webkit-box
+          -webkit-box-orient: vertical
+          -webkit-line-clamp: 2
+          overflow: hidden
+          white-space: normal
+      img
+        border-radius: $radius
   li.carousel-item:nth-child(n+2)
-    margin-left: 1rem
+    margin-left: 1.5rem
 
 // Book Image component
 .book-image-figure

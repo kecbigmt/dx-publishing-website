@@ -35,13 +35,16 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`src/templates/${node.frontmatter.templateKey}.jsx`),
-      context: {
-        id: node.id,
-      }
-    })
+    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item'].includes(node.frontmatter.templateKey)) {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve(`src/templates/${node.frontmatter.templateKey}.jsx`),
+        context: {
+          id: node.id,
+          slug: node.fields.slug,
+        }
+      })
+    }
   })
 }
 
