@@ -43,7 +43,16 @@ footer.footer
 .icon-btn
   background: none
   border: none
+
+
+.section-footer
+  display: flex
+  flex-direction: row
+  justify-content: center
+  margin-top: calc(#{$block-spacing} / 2)
+  margin-bottom: calc(#{$block-spacing} / 2)
   
+// Button component
 button
   &.navbar-item
     background: none
@@ -58,6 +67,7 @@ button
       background-color: $navbar-item-hover-background-color
       color: $navbar-item-hover-color
 
+// BookCarousel component
 ul.carousel-list
   margin-top: calc(#{$block-spacing} / 2)
   margin-bottom: calc(#{$block-spacing} / 2)
@@ -69,6 +79,7 @@ ul.carousel-list
   li.carousel-item:nth-child(n+2)
     margin-left: 1rem
 
+// Book Image component
 .book-image-figure
   display: inline-block
 
@@ -78,6 +89,7 @@ ul.carousel-list
   object-fit: cover
   border-radius: $radius
 
+// News
 .news-ul
   margin-top: calc(#{$block-spacing} / 2)
   margin-bottom: calc(#{$block-spacing} / 2)
@@ -109,14 +121,7 @@ ul.carousel-list
 .news-li-time
   display: inline-block
 
-.section-footer
-  display: flex
-  flex-direction: row
-  justify-content: center
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
-
-
+// Featured Text List
 ul.featured-text-list
   margin-top: calc(#{$block-spacing} / 2)
   margin-bottom: calc(#{$block-spacing} / 2)
