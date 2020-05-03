@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import BreadCrumbList from '../components/BreadCrumbList'
 import ArticleBody from '../components/ArticleBody'
 
-export default function Template({ data }) {
+const NewsPost = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds post data
   const { frontmatter, html } = markdownRemark
   return (
@@ -47,12 +47,11 @@ export default function Template({ data }) {
   )
 }
 
+export default NewsPost
+
 export const pageQuery = graphql`
-  query($templateKey: String!, $slug: String!) {
-    markdownRemark(frontmatter: {
-      templateKey: { eq: $templateKey }
-      slug: { eq: $slug }
-    }) {
+  query($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         date
