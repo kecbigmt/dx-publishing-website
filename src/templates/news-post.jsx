@@ -18,7 +18,7 @@ const NewsPost = ({ data }) => {
       />
       <div className="is-flex is-flex-dir-column has-flex-item-centered">
         <article className="article">
-        <header className="news-header">
+          <header>
             <BreadCrumbList
               items={[
                 { label: 'トップ', to: '/' },
@@ -38,7 +38,7 @@ const NewsPost = ({ data }) => {
               <Img fixed={frontmatter.featuredImage.childImageSharp.fixed} alt={frontmatter.featuredImageAlt} />
           }
           <ArticleBody html={html} />
-          <footer className="news-footer">
+          <footer>
             <hr />
           </footer>
         </article>

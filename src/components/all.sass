@@ -45,6 +45,18 @@ article.article
   max-width: 680px
   padding-right: 1rem
   padding-left: 1rem
+  margin-top: calc(#{$block-spacing} / 2)
+  margin-bottom: calc(#{$block-spacing} / 2)
+  header
+    margin-top: $block-spacing
+    margin-bottom: $block-spacing
+    .subtitle
+      color: $text-light
+      font-size: $size-small
+
+  footer
+    margin-bottom: $block-spacing
+
 
 .icon-btn
   background: none
@@ -136,16 +148,6 @@ ul.carousel-list
   time
     display: inline-block
     color: $text-light
-
-.news-header
-  margin-top: $block-spacing
-  margin-bottom: $block-spacing
-  .subtitle
-    color: $text-light
-    font-size: $size-small
-
-.news-footer
-  margin-bottom: $block-spacing
 
 // Featured Text List
 ul.featured-text-list
