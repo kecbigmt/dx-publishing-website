@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import DefaultOGPImage from '../images/ogp-image.png'
+
 function SEO({ description, lang, meta, title, ogpImage }) {
   const { site } = useStaticQuery(
     graphql`
@@ -19,7 +21,6 @@ function SEO({ description, lang, meta, title, ogpImage }) {
             title
             description
             author
-            ogpImage
           }
         }
       }
@@ -27,7 +28,7 @@ function SEO({ description, lang, meta, title, ogpImage }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaOgpImage = ogpImage || site.siteMetadata.ogpImage
+  const metaOgpImage = ogpImage || DefaultOGPImage
 
   return (
     <Helmet
