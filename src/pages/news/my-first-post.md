@@ -1,6 +1,5 @@
 ---
 templateKey: news-post
-slug: my-first-post
 title: My First Post
 description: This is my first Gatsby poste written in Markdown!
 date: 2020-05-06

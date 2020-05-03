@@ -9,7 +9,7 @@ import ArticleBody from '../components/ArticleBody'
 
 const NewsPost = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds post data
-  const { frontmatter, html } = markdownRemark
+  const { fields, frontmatter, html } = markdownRemark
   return (
     <Layout>
       <SEO
@@ -23,7 +23,7 @@ const NewsPost = ({ data }) => {
               items={[
                 { label: 'トップ', to: '/' },
                 { label: 'ニュース', to: '/news' },
-                { label: frontmatter.title, to: '/news/my-first-post' },
+                { label: frontmatter.title, to: fields.slug },
               ]}
             />
             <h1 className="title">
@@ -53,6 +53,9 @@ export const pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         date
         title

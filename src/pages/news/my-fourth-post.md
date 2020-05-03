@@ -1,6 +1,5 @@
 ---
 templateKey: news-post
-slug: my-fourth-post
 title: My Fourth Post
 description: This is my fourth Gatsby poste written in Markdown!
 date: 2020-05-09

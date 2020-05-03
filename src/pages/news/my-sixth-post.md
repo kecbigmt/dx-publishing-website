@@ -1,6 +1,5 @@
 ---
 templateKey: news-post
-slug: my-sixth-post
 title: My Sixth Post
 description: This is my sixth Gatsby poste written in Markdown!
 date: 2020-05-11

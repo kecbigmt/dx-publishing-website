@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
               excerpt: post.node.excerpt,
               thumbnailImageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
               thumbnailImageAlt: post.node.frontmatter.featuredImageAlt,
-              to: `/news/${post.node.frontmatter.slug}/`,
+              to: post.node.fields.slug,
             }))} />
             {
               posts.length > 3 &&
@@ -63,8 +63,10 @@ export const pageQuery = graphql`
         node {
           excerpt(pruneLength: 250)
           id
-          frontmatter {
+          fields {
             slug
+          }
+          frontmatter {
             title
             date
             featuredImage {
