@@ -24,6 +24,20 @@ main
   margin-left: auto
   margin-right: auto
 
+footer.footer
+  > nav
+    > ul
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-top: $block-spacing
+      margin-bottom: $block-spacing
+      > li
+        display: inline-block
+        list-style: none
+      > li:nth-child(n+2)
+        margin-left: $block-spacing
+
 .icon-btn
   background: none
   border: none
