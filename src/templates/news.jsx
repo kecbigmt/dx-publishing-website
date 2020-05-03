@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import SEO from "../components/seo"
 import Layout from '../components/Layout'
@@ -14,7 +15,7 @@ export default function Template({ data }) {
       <SEO
         title={frontmatter.title}
         description={frontmatter.description}
-        ogpImage={`https://dx-publishing.jp${frontmatter.featuredImage}`}
+        // ogpImage={`https://dx-publishing.jp${frontmatter.featuredImage}`}
       />
       <div className="is-flex is-flex-dir-column has-flex-item-centered">
         <article className="article">
@@ -30,9 +31,13 @@ export default function Template({ data }) {
               { frontmatter.title }
             </h1>
             <p className="subtitle">
-              { frontmatter.date }
+              { new Date(frontmatter.date).toLocaleDateString() }
             </p>
           </header>
+          {
+            data.file && 
+              <Img fixed={data.file.childImageSharp.fixed} alt="featured" />
+          }
           <ArticleBody html={html} />
           <footer className="news-footer">
             <hr />
@@ -44,17 +49,24 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-  query($templateKey: String!, $slug: String!) {
+  query($templateKey: String!, $slug: String!, $featuredImage: String!) {
     markdownRemark(frontmatter: {
       templateKey: { eq: $templateKey }
       slug: { eq: $slug }
     }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         title
         description
         featuredImage
+      }
+    }
+    file(relativePath: { eq: $featuredImage }) {
+      childImageSharp {
+        fixed(width: 680) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }
