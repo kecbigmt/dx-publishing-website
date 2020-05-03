@@ -1,5 +1,7 @@
 import React, { useState }  from "react"
 import { Link } from "gatsby"
+
+import { PurchaseLink } from './Button'
 import Logo from '../images/logo.svg'
 
 const Navbar = () => {
@@ -47,9 +49,7 @@ const Navbar = () => {
             </button>
             <div className="navbar-item">
               <div className="buttons">
-                <a href="https://www.amazon.co.jp/dp/4910209018" className="button is-primary">
-                  <strong>通販サイト</strong>
-                </a>
+                <PurchaseLink color="primary" url="https://www.amazon.co.jp/dp/4910209018" />
               </div>
             </div>
           </div>

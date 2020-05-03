@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import BookCarousel from './BookCarousel'
+import { MoreDetailLink } from './Button'
 import BookDummyImage from '../images/book_dummy.png'
 
 const LatestTopic = () => (
@@ -29,9 +30,7 @@ const LatestTopic = () => (
       </ul>
     </div>
     <footer className="section-footer">
-      <Link to="/products/" className="button is-primary is-rounded">
-        もっと詳しく
-      </Link>
+      <MoreDetailLink color="primary" to="/products/" />
     </footer>
   </section>
 )

@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import NewsList from '../components/NewsList'
 import LatestTopic from '../components/LatestTopic'
+import { NewsListLink } from '../components/Button'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -35,9 +36,7 @@ const IndexPage = ({ data }) => (
             },
           ]} />
           <footer className="section-footer">
-            <Link to="/info/" className="button is-primary is-rounded">
-              お知らせ一覧
-            </Link>
+            <NewsListLink color="primary" to="/info/" />
           </footer>
         </section>
       </div>
