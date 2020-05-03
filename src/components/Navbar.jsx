@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <Link className="navbar-item" to="/">
             <img src={Logo} width="124" height="32" alt="logo" />
-          </a>
+          </Link>
 
           <button
             className={`icon-btn navbar-burger burger ${active ? 'is-active' : ''}`} 

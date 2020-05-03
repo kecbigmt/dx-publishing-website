@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -14,7 +13,7 @@ const IndexPage = ({ data }) => (
       <div className="hero-body">
         <div className="container">
           <p className="title is-2">
-            キャッチコピーがここに
+            学びや探究に興味を持つ子どもたちのために
           </p>
           <p className="subtitle is-4">
           「創造的な学び」を子供たちにもたらすプログラミング学習用カードブックです。
@@ -36,7 +35,7 @@ const IndexPage = ({ data }) => (
             },
           ]} />
           <footer className="section-footer">
-            <NewsListLink color="primary" to="/info/" />
+            <NewsListLink color="primary" to="/news/" />
           </footer>
         </section>
       </div>

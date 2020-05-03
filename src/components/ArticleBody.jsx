@@ -8,7 +8,7 @@ import React from 'react'
 const ArticleBody = ({ html }) => (
   <div 
     className="content article-body"
-    dangerouslySetInnerHTML={{ _html: html }}
+    dangerouslySetInnerHTML={{ __html: html }}
   />
 )
 
