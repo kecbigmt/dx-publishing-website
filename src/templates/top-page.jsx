@@ -7,7 +7,6 @@ import BookCarousel from '../components/BookCarousel'
 import FeaturedTextList from '../components/FeaturedTextList'
 import { MoreDetailLink } from '../components/Button'
 import { NewsListLink } from '../components/Button'
-import BookDummyImage from '../images/book_dummy.png'
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
