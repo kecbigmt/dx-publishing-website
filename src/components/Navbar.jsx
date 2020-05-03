@@ -1,13 +1,16 @@
 import React, { useState }  from "react"
 import { Link } from "gatsby"
 
+import { PurchaseLink } from './Button'
+import Logo from '../images/logo.svg'
+
 const Navbar = () => {
   const [active, setActive] = useState(false);
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="logo" />
+            <img src={Logo} width="124" height="32" alt="logo" />
           </a>
 
           <button
@@ -46,9 +49,7 @@ const Navbar = () => {
             </button>
             <div className="navbar-item">
               <div className="buttons">
-                <a href="https://www.amazon.co.jp/dp/4910209018" className="button is-primary">
-                  <strong>通販サイト</strong>
-                </a>
+                <PurchaseLink color="primary" url="https://www.amazon.co.jp/dp/4910209018" />
               </div>
             </div>
           </div>
