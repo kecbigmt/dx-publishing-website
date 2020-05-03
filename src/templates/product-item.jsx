@@ -9,7 +9,6 @@ import ArticleBody from '../components/ArticleBody'
 const ProductItem = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds post data
   const { fields, frontmatter, html } = markdownRemark
-  console.log(JSON.stringify(frontmatter.books))
   return (
     <Layout>
       <SEO
