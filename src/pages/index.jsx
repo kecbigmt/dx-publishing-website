@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
             <h1 className="title is-3">
               お知らせ
             </h1>
-            <NewsList items={posts.map(post => ({
+            <NewsList items={posts.slice(0, 3).map(post => ({
               id: post.node.id,
               title: post.node.frontmatter.title,
               date: post.node.frontmatter.date,
@@ -39,9 +39,12 @@ const IndexPage = ({ data }) => {
               thumbnailImageAlt: post.node.frontmatter.featuredImageAlt,
               to: `/news/${post.node.frontmatter.slug}/`,
             }))} />
-            <footer className="section-footer">
-              <NewsListLink color="primary" to="/news/" />
-            </footer>
+            {
+              posts.length > 3 &&
+                <footer className="section-footer">
+                  <NewsListLink color="primary" to="/news/" />
+                </footer>
+            }
           </section>
         </div>
       </main>
@@ -54,7 +57,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]}
       filter: { frontmatter: { templateKey: { eq: "news" } } }
-      limit: 3
+      limit: 4
     ) {
       edges {
         node {
