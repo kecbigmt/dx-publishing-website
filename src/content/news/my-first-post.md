@@ -3,8 +3,9 @@ templateKey: news
 slug: my-first-post
 title: My First Post
 description: This is my first Gatsby poste written in Markdown!
-date: 2019-07-10
-featuredImage: my-first-post.jpg
+date: 2020-05-06
+featuredImage: ../../images/my-first-post.jpg
+featuredImageAlt: 帆船
 ---
 
 ## This is my first Gatsby poste written in Markdown!

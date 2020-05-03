@@ -15,7 +15,6 @@ export default function Template({ data }) {
       <SEO
         title={frontmatter.title}
         description={frontmatter.description}
-        // ogpImage={`https://dx-publishing.jp${frontmatter.featuredImage}`}
       />
       <div className="is-flex is-flex-dir-column has-flex-item-centered">
         <article className="article">
@@ -35,8 +34,8 @@ export default function Template({ data }) {
             </p>
           </header>
           {
-            data.file && 
-              <Img fixed={data.file.childImageSharp.fixed} alt="featured" />
+            frontmatter.featuredImage && 
+              <Img fixed={frontmatter.featuredImage.childImageSharp.fixed} alt={frontmatter.featuredImageAlt} />
           }
           <ArticleBody html={html} />
           <footer className="news-footer">
@@ -49,7 +48,7 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-  query($templateKey: String!, $slug: String!, $featuredImage: String!) {
+  query($templateKey: String!, $slug: String!) {
     markdownRemark(frontmatter: {
       templateKey: { eq: $templateKey }
       slug: { eq: $slug }
@@ -59,14 +58,14 @@ export const pageQuery = graphql`
         date
         title
         description
-        featuredImage
-      }
-    }
-    file(relativePath: { eq: $featuredImage }) {
-      childImageSharp {
-        fixed(width: 680) {
-          ...GatsbyImageSharpFixed
+        featuredImage {
+          childImageSharp {
+            fixed(width: 680) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
+        featuredImageAlt
       }
     }
   }

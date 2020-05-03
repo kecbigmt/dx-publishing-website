@@ -1,31 +1,40 @@
 import React from 'react'
-import "bulma"
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 /**
  * NewsListItem component (for being included in NewsList)
- * @param {object} props
+ * @param {Object} props
  * @param {string} props.title 
- * @param {number} props.timestamp
- * @param {string} props.url
+ * @param {string} props.date
+ * @param {string} props.to
+ * @param {Object} props.thumbnailImageFile
+ * @param {string} props.thumbnailImageAlt
  * @return {JSX.Element}
  */
-export const NewsListItem = ({ title, timestamp, url }) => {
-  const dt = new Date(timestamp * 1000)
+export const NewsListItem = ({ title, date, to, excerpt, thumbnailImageFile, thumbnailImageAlt }) => {
+  const dt = new Date(date)
   return (
     <li className="card news-li">
-      <a className="card-content news-li-content" href={url}>
-      <img
-          src="https://bulma.io/images/placeholders/1280x960.png"
-          alt="Placeholder"
-          className="news-li-thumbnail"
-        />
+      <Link className="card-content news-li-content" to={to}>
+        {
+          thumbnailImageFile && 
+          <Img
+            fixed={thumbnailImageFile}
+            alt={thumbnailImageAlt}
+            className="news-li-thumbnail"
+          />
+        }
         <div className="content">
           <span className="news-li-title">
             { title }
           </span>
-          <time className="news-li-timestamp" dateTime={dt.toISOString()}>{dt.toLocaleDateString()}</time>
+          <span className="news-li-excerpt">
+            { excerpt }
+          </span>
+          <time dateTime={dt.toISOString()}>{dt.toLocaleDateString()}</time>
         </div>
-      </a>
+      </Link>
     </li>
   )
 };
@@ -33,13 +42,13 @@ export const NewsListItem = ({ title, timestamp, url }) => {
 /**
  * NewsList component
  * @param {object} props
- * @param {Array.<{title: string; timestamp: number; url: string}>} props.items
+ * @param {Array.<{title: string; date: string; to: string; thumbnailImageFile: object; thumbnailImageAlt: string}>} props.items
  */
 
  const NewsList = ({ items }) => (
    <ul className="news-ul">
      {
-       items.map(item => <NewsListItem key={item.timestamp} { ...item } />)
+       items.map(item => <NewsListItem key={`${item.to}`} { ...item } />)
      }
    </ul>
  )

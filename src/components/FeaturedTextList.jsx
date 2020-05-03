@@ -9,7 +9,7 @@ const FeaturedTextList = ({ items = [] }) => (
   <ul className="featured-text-list">
     {
       items.map(item => (
-        <li key="item.text">{item.text}</li>
+        <li key={item.text}>{item.text}</li>
       ))
     }
   </ul>

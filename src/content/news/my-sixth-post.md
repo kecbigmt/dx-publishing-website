@@ -1,9 +1,9 @@
 ---
 templateKey: news
-slug: my-second-post
-title: My Second Post
-description: This is my second Gatsby poste written in Markdown!
-date: 2020-05-07
+slug: my-sixth-post
+title: My Sixth Post
+description: This is my sixth Gatsby poste written in Markdown!
+date: 2020-05-11
 featuredImage: ../../images/my-first-post.jpg
 featuredImageAlt: 帆船
 ---

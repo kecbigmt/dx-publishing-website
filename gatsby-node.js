@@ -19,7 +19,6 @@ exports.createPages = async ({ actions, graphql }) => {
             frontmatter {
               slug
               templateKey
-              featuredImage
             }
           }
         }
@@ -38,7 +37,6 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         slug: node.frontmatter.slug,
         templateKey: node.frontmatter.templateKey,
-        featuredImage: node.frontmatter.featuredImage,
       }
     })
   })

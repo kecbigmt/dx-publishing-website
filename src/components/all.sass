@@ -104,28 +104,38 @@ ul.carousel-list
   width: 5rem
   height: 5rem
   object-fit: cover
+  flex: none
+  border-radius: $radius
 
 .news-li
   text-decoration: none
   border-radius: $radius
+  .news-li-content
+    display: flex
+    flex-direction: row
 
-.news-li-content
-  display: flex
-  flex-direction: row
+  .news-li-content
+    > *:nth-child(n+2)
+      margin-left: 1rem
 
-.news-li-content
-  > *:nth-child(n+2)
-    margin-left: 1rem
+  .news-li-title
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+    color: $text
+    font-weight: $weight-semibold
 
-.news-li-title
-  display: -webkit-box
-  -webkit-box-orient: vertical
-  -webkit-line-clamp: 2
-  overflow: hidden
-  color: $text
+  .news-li-excerpt
+    color: $text-light
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 1
+    overflow: hidden
 
-.news-li-time
-  display: inline-block
+  time
+    display: inline-block
+    color: $text-light
 
 .news-header
   margin-top: $block-spacing
