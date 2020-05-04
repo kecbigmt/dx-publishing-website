@@ -13,9 +13,9 @@ const BookList = ({ items }) => (
     {
       items.map(item => (
         <li key={item.title} className="box">
-          <article className="media">
-            <Img className="media-left" fixed={item.imageFile} alt={item.imageAlt} />
-            <div className="media-content">
+          <article className="book-article">
+            <Img className="book-image" fixed={item.imageFile} alt={item.imageAlt} />
+            <div className="book-content">
               <div className="content">
                 <p className="book-title">
                   <strong>{item.title}</strong>

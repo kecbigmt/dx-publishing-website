@@ -63,8 +63,6 @@ footer.footer
 article.article
   width: 100%
   max-width: 680px
-  padding-right: 1rem
-  padding-left: 1rem
 
   footer
     margin-bottom: $block-spacing
@@ -155,6 +153,17 @@ ul.book-list
   img
     border-radius: $radius
   li
+    .book-article
+      display: flex
+      flex-direction: row
+      @include mobile
+        flex-direction: column
+        align-items: center
+      .book-image
+        flex: none
+        margin-right: 1rem
+        @include mobile
+         margin-bottom: 1rem
     nav
       margin-top: 1rem
 
@@ -200,6 +209,7 @@ ul.featured-text-list
     &:before
       content: ""
       display: inline-block
+      flex: none
       width: 2rem
       height: 2rem
       background: url('../images/star-list-icon.svg') no-repeat
