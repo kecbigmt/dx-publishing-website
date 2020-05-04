@@ -32,11 +32,15 @@ const ContactPage = ({ data, pageContext }) => {
         ...state,
       }),
     })
-      .then(() => {
-        navigate('/contact-success/')
+      .then(res => {
+        if (res.ok) {
+          navigate('/contact-success/')
+        } else {
+          alert('エラーが発生しました')
+        }
         setLoading(false)
       })
-      .catch(err => {
+      .catch(() => {
         alert('送信に失敗しました')
         setLoading(false)
       })
