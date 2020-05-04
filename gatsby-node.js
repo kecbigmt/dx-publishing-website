@@ -47,7 +47,7 @@ exports.createPages = async ({ actions, graphql }) => {
       return [] 
     }
     const current = slug.slice(0, currentIndex + 1)
-    return [{ label: slugDict[current], to: current }, ...splitSlug(slug, currentIndex)]
+    return [{ label: slugDict[current], to: current }, ...makeBreadcrumbs(slug, currentIndex)]
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
