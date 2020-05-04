@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
             <li><Link to="/contact/">お問い合わせ</Link></li>
           </ul>
         </nav>
-        <div className="content has-text-centered">
+        <div className="copyright has-text-centered">
         © 2020 DX Publishing
         </div>
       </footer>

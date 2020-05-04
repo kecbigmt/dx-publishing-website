@@ -26,19 +26,24 @@ main
 
 footer.footer
   > nav
+    margin-top: calc(#{$block-spacing} / 2)
+    margin-bottom: calc(#{$block-spacing} / 2)
     > ul
       display: flex
       flex-direction: row
       justify-content: center
-      margin-top: $block-spacing
-      margin-bottom: $block-spacing
       list-style: none
+      flex-wrap: wrap
       > li
-        display: inline-block
+        margin-top: .5rem
+        display: block
       > li::before
         content: "\200B"
       > li:nth-child(n+2)
         margin-left: $block-spacing
+  .copyright
+    margin-top: calc(#{$block-spacing} / 2)
+    margin-bottom: calc(#{$block-spacing} / 2)
 
 article.article
   width: 100%
