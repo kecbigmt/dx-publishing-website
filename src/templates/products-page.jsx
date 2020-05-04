@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import ProductList from '../components/ProductList'
+import BreadCrumbList from '../components/BreadCrumbList'
 
 const ProductsPage = ({ data }) => {
   const { fields } = data.markdownRemark
@@ -17,9 +18,17 @@ const ProductsPage = ({ data }) => {
       <main>
         <div className="container">
           <section className="section">
-            <h1 className="title">
-              { fields.frontmatter.title }
-            </h1>
+            <header>
+              <BreadCrumbList
+                items={[
+                  { label: 'トップ', to: '/' },
+                  { label: '本の紹介', to: '/products' },
+                ]}
+              />
+              <h1 className="title">
+                { fields.frontmatter.title }
+              </h1>
+            </header>
             <ProductList items={posts.map(post => ({
               id: post.node.id,
               title: post.node.fields.frontmatter.title,
@@ -61,7 +70,7 @@ export const pageQuery = graphql`
               description
               coverImage {
                 childImageSharp {
-                  fixed(width: 160, height: 160) {
+                  fixed(width: 120, height: 120) {
                     ...GatsbyImageSharpFixed
                   }
                 }

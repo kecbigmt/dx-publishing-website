@@ -15,24 +15,26 @@ import Img from 'gatsby-image'
 export const NewsListItem = ({ title, date, to, excerpt, thumbnailImageFile, thumbnailImageAlt }) => {
   const dt = new Date(date)
   return (
-    <li className="card news-li">
-      <Link className="card-content news-li-content" to={to}>
+    <li className="media">
+      <Link className="is-flex" to={to}>
         {
           thumbnailImageFile && 
           <Img
             fixed={thumbnailImageFile}
             alt={thumbnailImageAlt}
-            className="news-li-thumbnail"
+            className="media-left"
           />
         }
-        <div className="content">
-          <span className="news-li-title">
+        <div className="media-content">
+          <p className="news-title is-size-5">
             { title }
-          </span>
-          <span className="news-li-excerpt">
+          </p>
+          <p className="news-excerpt is-size-6 has-text-grey">
             { excerpt }
-          </span>
-          <time dateTime={dt.toISOString()}>{dt.toLocaleDateString()}</time>
+          </p>
+          <p className="news-meta is-size-6 has-text-grey">
+            <time dateTime={dt.toISOString()}>{dt.toLocaleDateString()}</time>
+          </p>
         </div>
       </Link>
     </li>
@@ -46,7 +48,7 @@ export const NewsListItem = ({ title, date, to, excerpt, thumbnailImageFile, thu
  */
 
  const NewsList = ({ items }) => (
-   <ul className="news-ul">
+   <ul className="box news-list">
      {
        items.map(item => <NewsListItem key={`${item.to}`} { ...item } />)
      }

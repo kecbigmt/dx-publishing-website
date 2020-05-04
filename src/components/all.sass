@@ -159,56 +159,34 @@ ul.book-list
       margin-top: 1rem
 
 ul.product-list
+  a
+    color: $text
+    &:hover
+      color: $link
   img
     border-radius: $radius
   li
-    .media-content
-      color: $text
     nav
       margin-top: 1rem
 
 
 // News
-.news-ul
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
-
-.news-li-thumbnail
-  width: 5rem
-  height: 5rem
-  object-fit: cover
-  flex: none
-  border-radius: $radius
-
-.news-li
-  text-decoration: none
-  border-radius: $radius
-  .news-li-content
-    display: flex
-    flex-direction: row
-
-  .news-li-content
-    > *:nth-child(n+2)
-      margin-left: 1rem
-
-  .news-li-title
+.news-list
+  a
+    color: $text
+    &:hover
+      color: $link
+  .news-title
     display: -webkit-box
     -webkit-box-orient: vertical
     -webkit-line-clamp: 2
     overflow: hidden
-    color: $text
     font-weight: $weight-semibold
-
-  .news-li-excerpt
-    color: $text-light
+  .news-excerpt
     display: -webkit-box
     -webkit-box-orient: vertical
     -webkit-line-clamp: 1
     overflow: hidden
-
-  time
-    display: inline-block
-    color: $text-light
 
 // Featured Text List
 ul.featured-text-list

@@ -15,9 +15,9 @@ const ProductList = ({ items }) => (
             <div className="media-left">
               <Img fixed={item.imageFile} alt={item.imageAlt} />
             </div>
-            <div className="media-content content">
-              <p className="has-text-weight-semibold">{item.title}</p>
-              <p>{item.description}</p>
+            <div className="media-content">
+              <p className="is-size-5 has-text-weight-semibold">{item.title}</p>
+              <p className="is-size-6 has-text-grey">{item.description}</p>
             </div>
           </Link>
         </li>
