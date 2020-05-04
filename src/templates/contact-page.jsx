@@ -52,6 +52,7 @@ const ContactPage = ({ data, pageContext }) => {
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="field">
             <label htmlFor="contact-name" className="label">お名前</label>
             <div className="control">
