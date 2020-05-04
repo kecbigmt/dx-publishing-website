@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
             />
           </div>
           <footer className="section-footer">
-            <MoreDetailLink color="primary" to="/products/" />
+            <MoreDetailLink color="primary" to="/products/scratch-activity-card-book" />
           </footer>
         </section>
           <section className="section">
