@@ -20,7 +20,6 @@ function SEO({ description, lang, meta, title, ogpImage }) {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
@@ -62,10 +61,13 @@ function SEO({ description, lang, meta, title, ogpImage }) {
           name: `twitter:card`,
           content: `summary`,
         },
+        // TODO: Twitterアカウントを作ったときに追加
+        /*
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
+        */
         {
           name: `twitter:title`,
           content: title,

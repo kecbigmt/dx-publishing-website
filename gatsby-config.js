@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `DX出版`,
+    description: `DX出版は、アマゾンのプリント・オンデマンドでの出版を手掛ける出版者です。`,
+    // TODO: Twitterアカウントを作ったときに追加。SEO設定をする
+    // author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,13 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `DX出版`,
+        short_name: `DX出版`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#D9D7DC`,
+        theme_color: `#1a54b8`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
