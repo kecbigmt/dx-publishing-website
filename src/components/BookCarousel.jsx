@@ -12,7 +12,7 @@ const Carousel = ({ items, className }) => (
     {
       items.map(item => (
         <li key={item.key} className="carousel-item">
-          <a href={item.url} target="_blank">
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
             <Img fixed={item.imageFile} alt={item.imageAlt} />
             <div className="book-info">
               <span className="book-price">{item.price}</span>
