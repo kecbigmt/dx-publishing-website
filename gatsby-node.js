@@ -51,7 +51,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item', 'products-page'].includes(node.fields.frontmatter.templateKey)) {
+    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item', 'products-page', 'contact-page'].includes(node.fields.frontmatter.templateKey)) {
       const breadcrumbs = makeBreadcrumbs(node.fields.slug)
       createPage({
         path: node.fields.slug,
