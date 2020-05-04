@@ -2,6 +2,7 @@
 templateKey: static-page
 title: DX出版とは？
 description: DX出版とは？DX出版とは？DX出版とは？
+coverImage: ../images/my-first-post.jpg
 ---
 
 DX出版は、アマゾンのプリント・オンデマンドでの出版を手掛ける出版者です。このためDX出版から発刊する書籍の書店はアマゾン（amazon.co.jp)だけです。

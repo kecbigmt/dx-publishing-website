@@ -12,9 +12,12 @@ const ProductList = ({ items }) => (
       items.map(item => (
         <li key={item.to} className="media">
           <Link className="is-flex" to={item.to}>
-            <div className="media-left">
-              <Img fixed={item.imageFile} alt={item.imageAlt} />
-            </div>
+            {
+              item.imageFile &&
+                <div className="media-left">
+                  <Img fixed={item.imageFile} alt={item.imageAlt} />
+                </div>
+            }
             <div className="media-content">
               <p className="is-size-5 has-text-weight-semibold">{item.title}</p>
               <p className="is-size-6 has-text-grey">{item.description}</p>

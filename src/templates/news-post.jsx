@@ -19,11 +19,6 @@ const NewsPost = ({ data, pageContext }) => {
         <PageHeader
           title={fields.frontmatter.title}
           subtitle={new Date(fields.frontmatter.date).toLocaleDateString()}
-          breadcrumbs={[
-            { label: 'トップ', to: '/' },
-            { label: 'ニュース', to: '/news' },
-            { label: fields.frontmatter.title, to: fields.slug },
-          ]}
         />
         {
           fields.frontmatter.featuredImage && 

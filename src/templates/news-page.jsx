@@ -16,10 +16,6 @@ const NewsPage = ({ data, pageContext }) => {
     >
       <PageHeader
         title={fields.frontmatter.title}
-        breadcrumbs={[
-          { label: 'トップ', to: '/' },
-          { label: fields.frontmatter.title, to: fields.slug },
-        ]}
       />
       <NewsList items={posts.map(post => ({
         id: post.node.id,

@@ -12,6 +12,20 @@ const StaticPage = ({ data, pageContext }) => {
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
+      hero={
+        fields.frontmatter.coverImage &&
+        <section 
+          className="hero with-background-image is-medium" 
+          style={{
+            backgroundImage: `url(${fields.frontmatter.coverImage.childImageSharp.fluid.src})`,
+          }}>
+          <div className="hero-body">
+            <div className="container">
+              <p className="title is-1">{ fields.frontmatter.title }</p>
+            </div>
+          </div>
+        </section>
+      }
     >
       <article className="article">
         <PageHeader
@@ -36,6 +50,13 @@ export const pageQuery = graphql`
         frontmatter {
           title
           description
+          coverImage {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
       html

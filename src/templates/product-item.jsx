@@ -14,15 +14,25 @@ const ProductItem = ({ data, pageContext }) => {
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
+      hero={
+        fields.frontmatter.coverImage &&
+        <section 
+        className="hero with-background-image is-medium" 
+        style={{
+          backgroundImage: `url(${fields.frontmatter.coverImage.childImageSharp.fluid.src})`,
+        }}>
+        <div className="hero-body">
+          <div className="container">
+            <p className="title is-2">本の紹介</p>
+            <p className="subtitle is-4">{ fields.frontmatter.title }</p>
+          </div>
+        </div>
+      </section>
+      }
     >
       <article className="article">
         <PageHeader
           title={fields.frontmatter.title}
-          breadcrumbs={[
-            { label: 'トップ', to: '/' },
-            { label: '本の紹介', to: '/products' },
-            { label: fields.frontmatter.title, to: fields.slug },
-          ]}
         />
         <ArticleBody html={html} />
         <h2 className="title">
