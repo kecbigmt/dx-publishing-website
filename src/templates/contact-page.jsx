@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { graphql } from 'gatsby'
 import { navigate } from 'gatsby-link'
 
 import PageLayout from '../components/PageLayout'
@@ -76,9 +77,9 @@ const ContactPage = ({ data, pageContext }) => {
             </div>
           </div>
           <div className="field">
-            <label htmlFor="contact-body" className="label">お問い合わせ内容</label>
+            <label htmlFor="contact-message" className="label">お問い合わせ内容</label>
             <div className="control">
-              <textarea id="contact-body" name="content" className="textarea" onChange={handleChange} />
+              <textarea id="contact-message" name="message" className="textarea" onChange={handleChange} />
             </div>
           </div>
           <div className="control">
