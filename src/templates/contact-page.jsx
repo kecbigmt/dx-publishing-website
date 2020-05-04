@@ -5,6 +5,7 @@ import { navigate } from 'gatsby-link'
 import PageLayout from '../components/PageLayout'
 import PageHeader from '../components/PageHeader'
 import ArticleBody from '../components/ArticleBody'
+import { SubmitButton } from '../components/Button'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -15,6 +16,7 @@ const encode = (data) => {
 const ContactPage = ({ data, pageContext }) => {
   const { fields, html } = data.markdownRemark
   const [state, setState] = useState({})
+  const [loading, setLoading] = useState(false)
 
   const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -30,8 +32,15 @@ const ContactPage = ({ data, pageContext }) => {
         ...state,
       }),
     })
-      .then(() => navigate('/contact-success/'))
-      .catch(err => alert('送信に失敗しました'))
+      .then(() => {
+        navigate('/contact-success/')
+        setLoading(false)
+      })
+      .catch(err => {
+        alert('送信に失敗しました')
+        setLoading(false)
+      })
+    setLoading(true)
   }
 
   return (
@@ -84,7 +93,7 @@ const ContactPage = ({ data, pageContext }) => {
             </div>
           </div>
           <div className="control">
-            <button type="submit" className="button is-primary">Submit</button>
+            <SubmitButton color="primary" className={loading ? 'is-fullwidth is-loading' : 'is-fullwidth'} />
           </div>
         </form>
       </div>

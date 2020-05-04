@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faExternalLinkAlt, faChevronRight, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 /**
  * @callback onClick
@@ -14,16 +14,17 @@ import { faExternalLinkAlt, faChevronRight } from '@fortawesome/free-solid-svg-i
  * @param {('button'|'a'|'Link')} props.tag
  * @param {('primary'|'secondary')} props.color 'primary' or 'secondary'
  * @param {string} [props.label]
- * @param {('external'|'more')} [props.icon]
+ * @param {('external'|'more'|'submit')} [props.icon]
  * @param {string} [props.url] only for 'a' tag
  * @param {string} [props.to] only for 'Link' tag
  * @param {onClick} [props.onClick]
  * @param {'normal'|'small'} [props.size] default: normal
+ * @param {('button'|'submit'|'reset')} [props.type] default: button (only when tag is 'button')
  * @param {string} [props.className] 
  * 
  */
 
-const Button = ({ tag, color, label, icon, url, to, onClick, size, className }) => {
+const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'button', className }) => {
   const Tag = tag === 'Link' ? Link : tag
   return (
     <Tag 
@@ -38,6 +39,7 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, className }) 
         to={to}
         target={ tag === 'a' ? '_blank' : undefined}
         rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
+        type={ tag === 'button' ? type : undefined }
     >
       {
         label && <span>{ label }</span>
@@ -45,6 +47,7 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, className }) 
       {
         icon === 'external' ? <span className="icon"><FontAwesomeIcon icon={faExternalLinkAlt} /></span>
           : icon === 'more' ? <span className="icon"><FontAwesomeIcon icon={faChevronRight} /></span>
+          : icon === 'submit' ? <span className="icon"><FontAwesomeIcon icon={faPaperPlane} /></span>
           : ''
       }
     </Tag>
@@ -72,7 +75,7 @@ export const PurchaseLink = (props) => (
  * @param {string} [props.className] 
  */
 export const MoreDetailLink = (props) => (
-  <Button tag='Link' label='もっと詳しく' icon='more' {...props}/>
+  <Button tag="Link" label="もっと詳しく" icon="more" {...props}/>
 )
 
 /**
@@ -84,6 +87,18 @@ export const MoreDetailLink = (props) => (
  * @param {string} [props.className] 
  */
 export const NewsListLink = (props) => (
-  <Button tag='Link' label='お知らせ一覧' icon='more' {...props}/>
+  <Button tag="Link" label="お知らせ一覧" icon="more" {...props}/>
+)
+
+/**
+ * SubmitButton
+ * @param {Object} props
+ * @param {('primary'|'secondary')} props.color
+ * @param {to} props.to
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
+ */
+export const SubmitButton = (props) => (
+  <Button tag="button" type="submit" label="送信" icon="submit" {...props}/>
 )
 
