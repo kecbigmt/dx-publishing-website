@@ -1,8 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-import BookImage from './BookImage'
-
 /**
  * Carousel component
  * @param {Object} props
