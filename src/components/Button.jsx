@@ -18,13 +18,27 @@ import { faExternalLinkAlt, faChevronRight } from '@fortawesome/free-solid-svg-i
  * @param {string} [props.url] only for 'a' tag
  * @param {string} [props.to] only for 'Link' tag
  * @param {onClick} [props.onClick]
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
  * 
  */
 
-const Button = ({ tag, color, label, icon, url, to, onClick }) => {
+const Button = ({ tag, color, label, icon, url, to, onClick, size, className }) => {
   const Tag = tag === 'Link' ? Link : tag
   return (
-    <Tag className={['button is-rounded', color === 'secondary' ? 'is-secondary' : 'is-primary'].join(' ')} href={url} onClick={onClick} to={to}>
+    <Tag 
+      className={[
+          'button is-rounded', 
+          color === 'secondary' ? 'is-secondary' : 'is-primary',
+          size === 'small' ? 'is-small' : 'is-normal',
+          className,
+        ].join(' ')} 
+        href={url} 
+        onClick={onClick} 
+        to={to}
+        target={ tag === 'a' ? '_blank' : undefined}
+        rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
+    >
       {
         label && <span>{ label }</span>
       }
@@ -42,6 +56,8 @@ const Button = ({ tag, color, label, icon, url, to, onClick }) => {
  * @param {Object} props
  * @param {('primary'|'secondary')} props.color
  * @param {url} props.url
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
  */
 export const PurchaseLink = (props) => (
   <Button tag='a' label='通販サイト' icon='external' {...props}/>
@@ -52,6 +68,8 @@ export const PurchaseLink = (props) => (
  * @param {Object} props
  * @param {('primary'|'secondary')} props.color
  * @param {to} props.to
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
  */
 export const MoreDetailLink = (props) => (
   <Button tag='Link' label='もっと詳しく' icon='more' {...props}/>
@@ -62,6 +80,8 @@ export const MoreDetailLink = (props) => (
  * @param {Object} props
  * @param {('primary'|'secondary')} props.color
  * @param {to} props.to
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
  */
 export const NewsListLink = (props) => (
   <Button tag='Link' label='お知らせ一覧' icon='more' {...props}/>
