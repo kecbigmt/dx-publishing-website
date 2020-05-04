@@ -3,6 +3,7 @@ templateKey: product-item
 title: Scratchアクティビティ カードブック・シリーズ
 description: 「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック
 coverImage: ../../images/my-first-post.jpg
+date: 2020-05-07
 books:
   -
     title: 名前を動かそう・音楽を作ろう編

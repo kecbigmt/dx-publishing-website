@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item'].includes(node.frontmatter.templateKey)) {
+    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item', 'products-page'].includes(node.frontmatter.templateKey)) {
       createPage({
         path: node.fields.slug,
         component: path.resolve(`src/templates/${node.frontmatter.templateKey}.jsx`),
