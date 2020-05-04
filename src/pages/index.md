@@ -3,6 +3,7 @@ templateKey: top-page
 title: ホーム
 catchCopy: 学びや探究に興味を持つ子どもたちのために
 catchDescription: 「創造的な学び」を子供たちにもたらすプログラミング学習用カードブックです。
+coverImage: ../images/my-first-post.jpg
 featured:
   title: Scratchアクティビティ カードブック・シリーズ
   description: 「創造的な学び」を子供たちにもたらすプログラミング学習用カードブックです。手元に置いておくだけで、子供たちがプログラミングに集中して取り組むのを手助けしてくれます。

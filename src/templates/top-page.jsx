@@ -15,7 +15,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <section className="hero is-medium is-primary is-bold">
+      <section
+        className="hero with-background-image is-medium"
+        style={{
+          backgroundImage: `url(${frontmatter.coverImage.childImageSharp.fluid.src})`,
+        }}
+      >
         <div className="hero-body">
           <div className="container">
             <p className="title is-2">{ frontmatter.catchCopy }</p>
@@ -86,6 +91,13 @@ export const pageQuery = graphql`
         title
         catchCopy
         catchDescription
+        coverImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         featured {
           title
           description
