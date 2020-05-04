@@ -44,9 +44,13 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-end">
-            <button className="navbar-item" onClick={() => console.log('english')}>
-              English
-            </button>
+            {
+              /**
+               * <button className="navbar-item" onClick={() => console.log('english')}>
+               *   English
+               * </button>
+               * */
+            }
             <div className="navbar-item">
               <div className="buttons">
                 <PurchaseLink color="primary" url="https://www.amazon.co.jp/dp/4910209018" />
