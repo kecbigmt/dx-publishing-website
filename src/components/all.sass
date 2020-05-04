@@ -29,6 +29,16 @@ main
   background-size: cover
   background-position: center
 
+
+
+.article-body
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
+
+.page-header
+  width: 100%
+  margin-bottom: $block-spacing
+
 footer.footer
   > nav
     margin-top: calc(#{$block-spacing} / 2)
@@ -55,14 +65,6 @@ article.article
   max-width: 680px
   padding-right: 1rem
   padding-left: 1rem
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
-  header
-    margin-top: $block-spacing
-    margin-bottom: $block-spacing
-    .subtitle
-      color: $text-light
-      font-size: $size-small
 
   footer
     margin-bottom: $block-spacing
@@ -98,8 +100,8 @@ button
 // BookCarousel component
 ul.carousel-list
   list-style: none
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
   @include mobile
     overflow-x: auto
     white-space: nowrap
@@ -150,8 +152,8 @@ ul.carousel-list
   border-radius: $radius
 
 ul.book-list
-  display: flex
-  flex-direction: column
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
   img
     border-radius: $radius
   li
@@ -159,6 +161,8 @@ ul.book-list
       margin-top: 1rem
 
 ul.product-list
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
   a
     color: $text
     &:hover

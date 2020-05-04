@@ -1,39 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
+import PageLayout from '../components/PageLayout'
 import ArticleBody from '../components/ArticleBody'
-import BreadCrumbList from '../components/BreadCrumbList'
-import SEO from '../components/seo'
+import PageHeader from '../components/PageHeader'
 
-const StaticPage = ({ data }) => {
-  const { fields, frontmatter } = data.markdownRemark
+const StaticPage = ({ data, pageContext }) => {
+  const { fields } = data.markdownRemark
   return (
-    <Layout>
-      <SEO 
-        title={frontmatter.title}
-        description={frontmatter.description}
-      />
-      <div className="is-flex is-flex-dir-column has-flex-item-centered">
-        <article className="article">
-          <header>
-            <BreadCrumbList
-              items={[
-                { label: 'トップ', to: '/' },
-                { label: frontmatter.title, to: fields.slug },
-              ]}
-            />
-            <h1 className="title">
-              { frontmatter.title }
-            </h1>
-          </header>
-          <ArticleBody html={data.markdownRemark.html} />
-        </article>
-        <footer>
-          <hr />
-        </footer>
-      </div>
-    </Layout>
+    <PageLayout
+      title={fields.frontmatter.title}
+      description={fields.frontmatter.description}
+      breadcrumbs={pageContext.breadcrumbs}
+    >
+      <article className="article">
+        <PageHeader
+          title={fields.frontmatter.title}
+        />
+        <ArticleBody html={data.markdownRemark.html} />
+      </article>
+      <footer>
+        <hr />
+      </footer>
+    </PageLayout>
   )
 }
 
@@ -44,12 +33,12 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       fields {
         slug
+        frontmatter {
+          title
+          description
+        }
       }
       html
-      frontmatter {
-        title
-        description
-      }
     }
   }
 `

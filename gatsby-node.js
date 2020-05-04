@@ -22,9 +22,10 @@ exports.createPages = async ({ actions, graphql }) => {
             id
             fields {
               slug
-            }
-            frontmatter {
-              templateKey
+              frontmatter {
+                title
+                templateKey
+              }
             }
           }
         }
@@ -36,14 +37,29 @@ exports.createPages = async ({ actions, graphql }) => {
     console.error(result.errors)
   }
 
+  // { '/news/': 'お知らせ', '/products/': '本の紹介' }のようなslugとページタイトルの辞書を作る
+  const slugDict = Object.fromEntries(result.data.allMarkdownRemark.edges.map(edge => [edge.node.fields.slug, edge.node.fields.frontmatter.title]))
+
+  // '/products/creative-computing-workbook/'のようなslugから'/', '/products/', '/products/creative-computing-workbook/'のように上から順にパスを取り出しつつ、パンくずリストのデータを用意する関数　
+  const makeBreadcrumbs = (slug, prevIndex) => {
+    const currentIndex = slug.indexOf('/', prevIndex + 1 || 0)
+    if (currentIndex === -1) {
+      return [] 
+    }
+    const current = slug.slice(0, currentIndex + 1)
+    return [{ label: slugDict[current], to: current }, ...splitSlug(slug, currentIndex)]
+  }
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item', 'products-page'].includes(node.frontmatter.templateKey)) {
+    if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item', 'products-page'].includes(node.fields.frontmatter.templateKey)) {
+      const breadcrumbs = makeBreadcrumbs(node.fields.slug)
       createPage({
         path: node.fields.slug,
-        component: path.resolve(`src/templates/${node.frontmatter.templateKey}.jsx`),
+        component: path.resolve(`src/templates/${node.fields.frontmatter.templateKey}.jsx`),
         context: {
           id: node.id,
           slug: node.fields.slug,
+          breadcrumbs,
         }
       })
     }
