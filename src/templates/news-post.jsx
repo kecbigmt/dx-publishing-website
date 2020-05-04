@@ -35,7 +35,9 @@ const NewsPost = ({ data }) => {
           </header>
           {
             frontmatter.featuredImage && 
-              <Img fixed={frontmatter.featuredImage.childImageSharp.fixed} alt={frontmatter.featuredImageAlt} />
+            <figure className="image article-featured-image">
+              <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} alt={frontmatter.featuredImageAlt} />
+            </figure>
           }
           <ArticleBody html={html} />
           <footer>
@@ -62,8 +64,8 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fixed(width: 680) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 680) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
