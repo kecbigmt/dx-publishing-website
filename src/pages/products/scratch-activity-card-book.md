@@ -27,7 +27,7 @@ books:
       * さあ、踊ろう：ミュージックとダンスの振り付けをアレンジしたダンスシーンのアニメーション作りを体験します
   -
     title: 物語を作ろう・ビデオモーションセンサー編
-    meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行日：2020年4月30日 / サイズ・仕様：A5・フルカラー・44ページ / ISBN：9784910209036
+    meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行日：2020年5月7日 / サイズ・仕様：A5・フルカラー・44ページ / ISBN：9784910209036
     image: ../../images/creative-computing-workbook-vol3.png
     purchaseUrl: https://www.amazon.co.jp/dp/4910209018
     description___md: |
