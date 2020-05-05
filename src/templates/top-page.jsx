@@ -3,11 +3,11 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import NewsList from '../components/NewsList'
 import BookCarousel from '../components/BookCarousel'
 import FeaturedTextList from '../components/FeaturedTextList'
 import { MoreDetailLink } from '../components/Button'
 import { NewsListLink } from '../components/Button'
+import ArticleList from "../components/ArticleList"
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -62,13 +62,13 @@ const IndexPage = ({ data }) => {
             <h1 className="title is-3">
               お知らせ
             </h1>
-            <NewsList items={posts.slice(0, 3).map(post => ({
+            <ArticleList items={posts.slice(0, 3).map(post => ({
               id: post.node.id,
               title: post.node.frontmatter.title,
               date: post.node.frontmatter.date,
               excerpt: post.node.excerpt,
-              thumbnailImageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
-              thumbnailImageAlt: post.node.frontmatter.featuredImageAlt,
+              imageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
+              imageAlt: post.node.frontmatter.featuredImageAlt,
               to: post.node.fields.slug,
             }))} />
             {

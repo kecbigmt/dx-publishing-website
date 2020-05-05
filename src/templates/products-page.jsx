@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import PageLayout from '../components/PageLayout'
 import PageHeader from '../components/PageHeader'
-import ProductList from '../components/ProductList'
+import ArticleList from '../components/ArticleList'
 
 const ProductsPage = ({ data, pageContext }) => {
   const { fields } = data.markdownRemark
@@ -17,10 +17,10 @@ const ProductsPage = ({ data, pageContext }) => {
       <PageHeader
         title={fields.frontmatter.title}
       />
-      <ProductList items={posts.map(post => ({
+      <ArticleList items={posts.map(post => ({
         id: post.node.id,
         title: post.node.fields.frontmatter.title,
-        description: post.node.fields.frontmatter.description,
+        excerpt: post.node.excerpt,
         imageFile: post.node.fields.frontmatter.thumbnailImage && post.node.fields.frontmatter.thumbnailImage.childImageSharp.fixed,
         imageAlt: post.node.fields.frontmatter.thumbnailImageAlt,
         to: post.node.fields.slug,
@@ -47,6 +47,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt(pruneLength: 250)
           id
           fields {
             slug

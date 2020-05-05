@@ -30,6 +30,14 @@ main
   background-position: center
 
 
+.thumbnail
+  width: 120px !important
+  height: 120px !important
+  object-fit: cover
+  border-radius: $radius
+  @include mobile
+    width: 80px !important
+    height: 80px !important
 
 .article-body
   margin-top: $block-spacing
@@ -167,34 +175,25 @@ ul.book-list
     nav
       margin-top: 1rem
 
-ul.product-list
+// ArticleList
+ul.article-list
+  width: 100%
+  @include mobile
+    padding: 0
+    background-color: transparent
   a
     color: $text
     &:hover
       color: $link
-  img
-    border-radius: $radius
-  li
-    nav
-      margin-top: 1rem
-
-
-// News
-.news-list
-  a
-    color: $text
-    &:hover
-      color: $link
-  .news-title
+  .article-title
     display: -webkit-box
     -webkit-box-orient: vertical
     -webkit-line-clamp: 2
     overflow: hidden
-    font-weight: $weight-semibold
-  .news-excerpt
+  .article-excerpt
     display: -webkit-box
     -webkit-box-orient: vertical
-    -webkit-line-clamp: 1
+    -webkit-line-clamp: 2
     overflow: hidden
 
 // Featured Text List

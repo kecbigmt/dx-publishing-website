@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import PageLayout from '../components/PageLayout'
 import PageHeader from '../components/PageHeader'
-import NewsList from '../components/NewsList'
+import ArticleList from '../components/ArticleList'
 
 const NewsPage = ({ data, pageContext }) => {
   const { fields } = data.markdownRemark
@@ -17,13 +17,13 @@ const NewsPage = ({ data, pageContext }) => {
       <PageHeader
         title={fields.frontmatter.title}
       />
-      <NewsList items={posts.map(post => ({
+      <ArticleList items={posts.map(post => ({
         id: post.node.id,
         title: post.node.frontmatter.title,
-        date: post.node.frontmatter.date,
         excerpt: post.node.excerpt,
-        thumbnailImageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
-        thumbnailImageAlt: post.node.frontmatter.featuredImageAlt,
+        date: post.node.frontmatter.date,
+        imageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
+        imageAlt: post.node.frontmatter.featuredImageAlt,
         to: post.node.fields.slug,
       }))} />
     </PageLayout>

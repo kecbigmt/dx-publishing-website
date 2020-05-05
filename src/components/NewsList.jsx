@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+
+import ListThumbnail from './ListThumbnail'
 
 /**
  * NewsListItem component (for being included in NewsList)
@@ -19,7 +20,7 @@ export const NewsListItem = ({ title, date, to, excerpt, thumbnailImageFile, thu
       <Link className="is-flex" to={to}>
         {
           thumbnailImageFile && 
-          <Img
+          <ListThumbnail
             fixed={thumbnailImageFile}
             alt={thumbnailImageAlt}
             className="media-left"

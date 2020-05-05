@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+
+import ListThumbnail from './ListThumbnail'
 
 /**
  * @param {Object} props
@@ -14,9 +15,11 @@ const ProductList = ({ items }) => (
           <Link className="is-flex" to={item.to}>
             {
               item.imageFile &&
-                <div className="media-left">
-                  <Img fixed={item.imageFile} alt={item.imageAlt} />
-                </div>
+                <ListThumbnail
+                  fixed={item.imageFile}
+                  alt={item.imageAlt}
+                  className="media-left"
+                />
             }
             <div className="media-content">
               <p className="is-size-5 has-text-weight-semibold">{item.title}</p>
