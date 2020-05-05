@@ -1,6 +1,6 @@
 ---
 templateKey: product-item
-title: 創造的コンピューティグ（学習者用ワークブック）
+title: 創造的コンピューティング
 description: 創造的コンピューティングは、ハーバード大学 教育大学院にて作成されたK-12（日本の小中高校に相当）を教える教育者向けのカリキュラムガイドです。
 thumbnailImage: ../../images/my-first-post.jpg
 thumbnailImageAlt: 帆船
