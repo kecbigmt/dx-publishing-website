@@ -19,12 +19,12 @@ featured:
       price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209018
     -
-      title: Vol.2 キャラクターを動かそう・さあ、踊ろう編
+      title: Vol.2 キャラクターを動かそう・さあ、踊ろう編（近日発売）
       image: ../images/creative-computing-workbook-vol2.png
       price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209018
     -
-      title: Vol.3 物語を作ろう・ビデオモーションセンサー編
+      title: Vol.3 物語を作ろう・ビデオモーションセンサー編（近日発売）
       image: ../images/creative-computing-workbook-vol3.png
       price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209018
@@ -32,5 +32,10 @@ featured:
       title: Vol.4 ゲーム編（近日発売）
       image: ../images/creative-computing-workbook-vol4.png
       price: "¥1,050+税"
+      url: https://www.amazon.co.jp/dp/4910209018
+    -
+      title: 初心者入門編（5月末発売予定）
+      image: ../images/creative-computing-workbook-vol4.png
+      price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209018
 ---
