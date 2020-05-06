@@ -2,7 +2,7 @@
 templateKey: news-post
 title:  Scratchアクティビティ・カードブック・シリーズの出版開始のお知らせ
 description: Scratchアクティビティ・カードブック・シリーズの出版
-date: 2020-05-06
+date: 2020-05-07
 featuredImage: ../../images/my-first-post.jpg
 featuredImageAlt: 帆船
 ---
@@ -23,6 +23,6 @@ featuredImageAlt: 帆船
 * Vol.3 「物語を作ろう・ビデオモーションセンサー編」
 * Vol.4 「ゲーム編」
 
-Amazon:https://www.amazon.co.jp/dp/4910209018
+ご購入は[Amazon](https://www.amazon.co.jp/dp/4910209018)へ
 
 

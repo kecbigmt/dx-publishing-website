@@ -34,9 +34,4 @@ featured:
       image: ../images/creative-computing-workbook-vol4.png
       price: "¥1,050+税"
       url: "" 
-    -
-      title: 初心者入門編（5月末発売予定）
-      image: ../images/creative-computing-workbook-vol4.png
-      price: "¥770+税"
-      url: "" 
 ---
