@@ -1,24 +1,28 @@
 ---
 templateKey: news-post
-title: My First Post
-description: This is my first Gatsby poste written in Markdown!
+title:  Scratchアクティビティ・カードブック・シリーズの出版開始のお知らせ
+description: Scratchアクティビティ・カードブック・シリーズの出版
 date: 2020-05-06
 featuredImage: ../../images/my-first-post.jpg
 featuredImageAlt: 帆船
 ---
 
-## This is my first Gatsby poste written in Markdown!
+## 新刊のご案内
+###Scratchアクティビティ カードブック・シリーズ Vol1
 
-### This is my first Gatsby poste written in Markdown!
+「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第一弾として「名前を動かそう・音楽を作ろう編」を発刊しました。
 
-This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!
+###特徴
 
-### This is my first Gatsby poste written in Markdown!
+本書はMITメディアラボのScratchチームが公開しているコーディングカード（２テーマ分）を収録した小冊子です。本年度から必修となる小学生のプログラミング授業（C分類：教育課程内で各教科とは別に実施）の補助教材としてお使いいただけます。プログラミング学習をネット授業形式で行う際も、児童の手元に本書があることで、スムーズな授業運営を可能にします。
 
-This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!This is my first Gatsby poste written in Markdown!
+###今後の予定
 
-## This is my first Gatsby poste written in Markdown!
+5月中旬に以下の３巻を発刊予定です。
+* Vol.2 「キャラクターを動かそう・さあ、踊ろう編」
+* Vol.3 「物語を作ろう・ビデオモーションセンサー編」
+* Vol.4 「ゲーム編」
 
-* This is my first Gatsby poste written in Markdown!
-* This is my first Gatsby poste written in Markdown!
-* This is my first Gatsby poste written in Markdown!
+Amazon:https://www.amazon.co.jp/dp/4910209018
+
+

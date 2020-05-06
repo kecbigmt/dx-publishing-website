@@ -1,6 +1,6 @@
 ---
 templateKey: news-post
-title: My Fifth Post
+title: Scratchアクティビティ・カードブック・シリーズ第一弾の出版のお知らせ
 description: This is my fifth Gatsby poste written in Markdown!
 date: 2020-05-10
 featuredImage: ../../images/my-first-post.jpg
