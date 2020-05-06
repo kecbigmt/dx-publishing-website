@@ -46,9 +46,12 @@ const ProductItem = ({ data, pageContext }) => {
             imageAlt: book.title,
           }))}
         />
-        <footer>
-          <hr />
-        </footer>
+        {
+          fields.frontmatter.footnote &&
+          <footer>
+              <div className="content footnote" dangerouslySetInnerHTML={{ __html: fields.frontmatter.footnote }}/>
+          </footer>
+        }
       </article>
     </PageLayout>
   )
@@ -78,6 +81,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           description
+          footnote
           books {
             title
             description
