@@ -16,22 +16,22 @@ featured:
   books:
     -
       title: Vol.1 名前を動かそう・音楽を作ろう編
-      image: ../images/creative-computing-workbook-vol1.png
+      image: ../images/creative-computing-workbook-vol1-on-sell.png
       price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209018
     -
       title: Vol.2 キャラクターを動かそう・さあ、踊ろう編（近日発売）
-      image: ../images/creative-computing-workbook-vol2.png
+      image: ../images/creative-computing-workbook-vol2-coming-soon.png
       price: "¥770+税"
       url: "" 
     -
       title: Vol.3 物語を作ろう・ビデオモーションセンサー編（近日発売）
-      image: ../images/creative-computing-workbook-vol3.png
+      image: ../images/creative-computing-workbook-vol3-coming-soon.png
       price: "¥770+税"
       url: "" 
     -
       title: Vol.4 ゲーム編（近日発売）
-      image: ../images/creative-computing-workbook-vol4.png
+      image: ../images/creative-computing-workbook-vol4-coming-soon.png
       price: "¥1,050+税"
       url: "" 
 ---
