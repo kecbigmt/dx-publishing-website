@@ -1,7 +1,7 @@
 ---
 templateKey: static-page
 title: DX出版について
-description: DX出版はアマゾンのプリント・オンデマンド出版を手がける出版者です。
+description: "" 
 hasCover: true
 cover:
   backgroundImage: ../images/about-cover.jpg
