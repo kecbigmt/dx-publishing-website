@@ -33,9 +33,4 @@ featured:
       image: ../images/creative-computing-workbook-vol4.png
       price: "¥1,050+税"
       url: https://www.amazon.co.jp/dp/4910209018
-    -
-      title: 初心者入門編（5月末発売予定）
-      image: ../images/creative-computing-workbook-vol4.png
-      price: "¥770+税"
-      url: https://www.amazon.co.jp/dp/4910209018
 ---
