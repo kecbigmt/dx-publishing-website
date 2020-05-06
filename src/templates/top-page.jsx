@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import PageCover from '../components/PageCover'
 import BookCarousel from '../components/BookCarousel'
 import FeaturedTextList from '../components/FeaturedTextList'
 import { MoreDetailLink } from '../components/Button'
@@ -15,19 +16,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <section
-        className="hero with-background-image is-medium"
-        style={{
-          backgroundImage: `url(${frontmatter.coverImage.childImageSharp.fluid.src})`,
-        }}
-      >
-        <div className="hero-body">
-          <div className="container">
-            <p className="title is-2">{ frontmatter.catchCopy }</p>
-            <p className="subtitle is-4">{ frontmatter.catchDescription }</p>
-          </div>
-        </div>
-      </section>
+      <PageCover
+        title={frontmatter.cover.title}
+        subtitle={frontmatter.cover.subtitle}
+        backgroundType="image-dark"
+        backgroundImageSrc={frontmatter.cover.backgroundImage.childImageSharp.fluid.src}
+      />
       <main>
         <div className="container">
         <section className="section">
@@ -89,12 +83,14 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        catchCopy
-        catchDescription
-        coverImage {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+        cover {
+          title
+          subtitle
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }

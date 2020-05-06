@@ -1,8 +1,10 @@
 ---
 templateKey: static-page
 title: DX出版について
-description: DX出版はアマゾンのプリント・オンデマンド出版を手がける出版者です。
-coverImage: ../images/my-first-post.jpg
+description: "" 
+hasCover: true
+cover:
+  backgroundImage: ../images/about-cover.jpg
 ---
 
 DX出版は、アマゾンのプリント・オンデマンドでの出版を手掛ける出版者です。このためDX出版から発刊する書籍の書店はアマゾン（amazon.co.jp)だけです。

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `DX出版`,
-    description: `DX出版は、アマゾンのプリント・オンデマンドでの出版を手掛ける出版者です。`,
+    description: `Amazonのプリント・オンデマンドでの出版を手掛ける出版者、DX出版のホームページ。DX出版の概要・書籍・お知らせなどをご覧いただけます。`,
     // TODO: Twitterアカウントを作ったときに追加。SEO設定をする
     // author: `@gatsbyjs`,
   },

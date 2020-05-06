@@ -2,34 +2,34 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import PageLayout from '../components/PageLayout'
+import PageCover from '../components/PageCover'
 import ArticleBody from '../components/ArticleBody'
 import PageHeader from '../components/PageHeader'
 
 const StaticPage = ({ data, pageContext }) => {
-  const { fields } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark
+  const backgroundImageSrc = frontmatter.cover 
+                              && frontmatter.cover.backgroundImage
+                                && frontmatter.cover.backgroundImage.childImageSharp.fluid.src
   return (
     <PageLayout
-      title={fields.frontmatter.title}
-      description={fields.frontmatter.description}
+      title={frontmatter.title}
+      description={frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
       hero={
-        fields.frontmatter.coverImage &&
-        <section 
-          className="hero with-background-image is-medium" 
-          style={{
-            backgroundImage: `url(${fields.frontmatter.coverImage.childImageSharp.fluid.src})`,
-          }}>
-          <div className="hero-body">
-            <div className="container">
-              <p className="title is-1">{ fields.frontmatter.title }</p>
-            </div>
-          </div>
-        </section>
+        frontmatter.hasCover &&
+        <PageCover
+          title={frontmatter.title}
+          subtitle={frontmatter.subtitle ? frontmatter.subtitle : undefined}
+          backgroundType={backgroundImageSrc ? 'image-dark' : 'color'}
+          backgroundColor={backgroundImageSrc === 'color' ? frontmatter.cover.backgroundColor : undefined}
+          backgroundImageSrc={backgroundImageSrc}
+        />
       }
     >
       <article className="article">
         <PageHeader
-          title={fields.frontmatter.title}
+          title={frontmatter.title}
         />
         <ArticleBody html={data.markdownRemark.html} />
       </article>
@@ -45,14 +45,14 @@ export default StaticPage
 export const pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      fields {
-        slug
-        frontmatter {
-          title
-          description
-          coverImage {
+      frontmatter {
+        title
+        description
+        hasCover
+        cover {
+          backgroundImage {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 1920) {
                 ...GatsbyImageSharpFluid
               }
             }
