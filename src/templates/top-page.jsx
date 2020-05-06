@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title={frontmatter.title} />
       <section
-        className="hero with-background-image is-medium"
+        className="hero-top hero with-background-image is-medium"
         style={{
           backgroundImage: `url(${frontmatter.coverImage.childImageSharp.fluid.src})`,
         }}
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         catchDescription
         coverImage {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
