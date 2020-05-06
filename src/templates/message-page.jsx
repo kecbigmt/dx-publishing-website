@@ -20,10 +20,12 @@ const MessagePage = ({ data }) => {
               {frontmatter.message.title}
             </h1>
             {
-              frontmatter.message.subtitle &&
-                <p className="subtitle">
-                  {frontmatter.message.subtitle}
-                </p>
+              frontmatter.message.description &&
+                <div className="content">
+                  <p className="has-text-gray">
+                    {frontmatter.message.description}
+                  </p>
+                </div>
             }
             <ToTopButton />
           </div>
