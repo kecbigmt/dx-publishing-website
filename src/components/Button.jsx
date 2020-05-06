@@ -102,3 +102,15 @@ export const SubmitButton = (props) => (
   <Button tag="button" type="submit" label="送信" icon="submit" {...props}/>
 )
 
+
+/**
+ * ToTopButton
+ * @param {Object} props
+ * @param {('primary'|'secondary')} props.color
+ * @param {to} [props.to] default: /
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
+ */
+export const ToTopButton = (props) => (
+  <Button tag="Link" label="トップページに移動" icon="more" to="/" {...props}/>
+)
