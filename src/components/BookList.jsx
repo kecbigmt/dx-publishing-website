@@ -1,12 +1,12 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-import { PurchaseLink } from './Button'
+import { PurchaseLink, PurchaseAltButton } from './Button'
 
 /**
  * BookList component
  * @param {Object} props
- * @param {Array.<{title: string; description: string; meta: string; url: string; imageFile: object; imageAlt: string }>} props.items
+ * @param {Array.<{title: string; description: string; meta: string; url: string; imageFile: object; imageAlt: string; altLabel?: string }>} props.items
  */
 const BookList = ({ items }) => (
   <ul className="book-list">
@@ -28,7 +28,11 @@ const BookList = ({ items }) => (
             </div>
           </article>
           <nav>
-            <PurchaseLink className="is-fullwidth" color="primary" url={item.url} size="small" />
+            {
+              item.url ?
+                <PurchaseLink className="is-fullwidth" color="primary" url={item.url} size="small" />
+                  : <PurchaseAltButton label={item.altLabel} className="is-fullwidth" color="dark" size="small" />
+            }
           </nav>
         </li>
       ))

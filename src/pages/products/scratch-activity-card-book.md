@@ -21,7 +21,8 @@ books:
     title: キャラクターを動かそう・さあ、踊ろう編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年5月15日 / サイズ・仕様：A5・フルカラー・46ページ / ISBN：9784910209029、定価：770円＋税
     image: ../../images/creative-computing-workbook-vol2.png
-    purchaseUrl: https://www.amazon.co.jp/dp/4910209018
+    purchaseUrl: "" 
+    purchaseAltLabel: 5月15日発売予定 
     description___md: |
       **収録しているコーディングカード**
       * キャラクターを動かそう：キャラクターのいろいろな動きを再現することでアニメーションの基本の動き作りを体験します
@@ -30,7 +31,8 @@ books:
     title: 物語を作ろう・ビデオモーションセンサー編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年5月15日 / サイズ・仕様：A5・フルカラー・44ページ / ISBN：9784910209036、定価：770円＋税
     image: ../../images/creative-computing-workbook-vol3.png
-    purchaseUrl: https://www.amazon.co.jp/dp/4910209018
+    purchaseUrl: "" 
+    purchaseAltLabel: 5月15日発売予定 
     description___md: |
       **収録しているコーディングカード**
       * 物語を作ろう：登場人物が生き生きとおしゃべりする物語を作成する体験をします
@@ -39,7 +41,8 @@ books:
     title: ゲーム編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年5月15日 / サイズ・仕様：A5・フルカラー・76ページ / ISBN：9784910209043、定価：1,050円＋税
     image: ../../images/creative-computing-workbook-vol4.png
-    purchaseUrl: https://www.amazon.co.jp/dp/4910209018
+    purchaseUrl: "" 
+    purchaseAltLabel: 5月15日発売予定 
     description___md: |
       **収録しているコーディングカード**
       * 追跡ゲーム：追跡してポイントをあげるゲームの作成を通して座標やゲームの基本処理を体験します

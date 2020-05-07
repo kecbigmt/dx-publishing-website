@@ -42,6 +42,7 @@ const ProductItem = ({ data, pageContext }) => {
             description: book.description,
             meta: book.meta,
             url: book.purchaseUrl,
+            altLabel: book.purchaseAltLabel,
             imageFile: book.image.childImageSharp.fixed,
             imageAlt: book.title,
           }))}
@@ -87,6 +88,7 @@ export const pageQuery = graphql`
             description
             meta
             purchaseUrl
+            purchaseAltLabel
             image {
               childImageSharp {
                 fixed(width: 150, height: 212) {

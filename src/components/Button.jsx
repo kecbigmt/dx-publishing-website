@@ -12,7 +12,7 @@ import { faExternalLinkAlt, faChevronRight, faPaperPlane } from '@fortawesome/fr
  * Button component
  * @param {Object} props
  * @param {('button'|'a'|'Link')} props.tag
- * @param {('primary'|'secondary')} props.color 'primary' or 'secondary'
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary'
  * @param {string} [props.label]
  * @param {('external'|'more'|'submit')} [props.icon]
  * @param {string} [props.url] only for 'a' tag
@@ -24,13 +24,13 @@ import { faExternalLinkAlt, faChevronRight, faPaperPlane } from '@fortawesome/fr
  * 
  */
 
-const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'button', className }) => {
+const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'button', disabled, className }) => {
   const Tag = tag === 'Link' ? Link : tag
   return (
     <Tag 
       className={[
           'button is-rounded', 
-          color === 'secondary' ? 'is-secondary' : 'is-primary',
+          color === 'dark' ? 'is-dark' : color === 'secondary' ? 'is-secondary' : 'is-primary',
           size === 'small' ? 'is-small' : 'is-normal',
           className,
         ].join(' ')} 
@@ -40,6 +40,7 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'butto
         target={ tag === 'a' ? '_blank' : undefined}
         rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
         type={ tag === 'button' ? type : undefined }
+        disabled={disabled ? true : undefined}
     >
       {
         label && <span>{ label }</span>
@@ -57,8 +58,8 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'butto
 /**
  * PurchaseLink
  * @param {Object} props
- * @param {('primary'|'secondary')} props.color
- * @param {url} props.url
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
+ * @param {string} props.url
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
  */
@@ -67,9 +68,21 @@ export const PurchaseLink = (props) => (
 )
 
 /**
+ * PurchaseAltButton 発売前の購入ボタン。クリックできない
+ * @param {Object} props
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
+ * @param {string} [props.url]
+ * @param {'normal'|'small'} [props.size] default: normal
+ * @param {string} [props.className] 
+ */
+export const PurchaseAltButton = (props) => (
+  <Button tag="button" label={props.label || '通販サイト'} icon={props.label ? undefined : 'external'} disabled={true} {...props} />
+)
+
+/**
  * MoreDetailLink
  * @param {Object} props
- * @param {('primary'|'secondary')} props.color
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
  * @param {to} props.to
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
@@ -81,7 +94,7 @@ export const MoreDetailLink = (props) => (
 /**
  * NewsListLink
  * @param {Object} props
- * @param {('primary'|'secondary')} props.color
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
  * @param {to} props.to
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
@@ -93,7 +106,7 @@ export const NewsListLink = (props) => (
 /**
  * SubmitButton
  * @param {Object} props
- * @param {('primary'|'secondary')} props.color
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
  * @param {to} props.to
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
@@ -106,7 +119,7 @@ export const SubmitButton = (props) => (
 /**
  * ToTopButton
  * @param {Object} props
- * @param {('primary'|'secondary')} props.color
+ * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
  * @param {to} [props.to] default: /
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
