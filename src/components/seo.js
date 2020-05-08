@@ -26,6 +26,7 @@ function SEO({ description, lang, meta, title, ogpImage }) {
     `
   )
 
+  const helmetTitle = title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
   const metaOgpImage = ogpImage || DefaultOGPImage
 
@@ -34,8 +35,7 @@ function SEO({ description, lang, meta, title, ogpImage }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={helmetTitle}
       meta={[
         {
           name: `description`,

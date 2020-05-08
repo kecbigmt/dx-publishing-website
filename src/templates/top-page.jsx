@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO />
       <PageCover
         title={frontmatter.cover.title}
         subtitle={frontmatter.cover.subtitle}
