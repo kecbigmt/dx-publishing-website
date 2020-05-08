@@ -7,11 +7,13 @@ import React from 'react'
  */
 const PageHeader = ({ title, subtitle }) => (
   <header className="page-header">
-    <h1 className="title">{ title }</h1>
-    {
-      subtitle &&
-        <p className="subtitle is-size-6 has-text-grey">{ subtitle }</p>
-    }
+    <div className="content">
+      <h1 className="title">{ title }</h1>
+      {
+        subtitle &&
+          <p className="subtitle is-size-6 has-text-grey">{ subtitle }</p>
+      }
+    </div>
   </header>
 )
 

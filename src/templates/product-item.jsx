@@ -33,9 +33,11 @@ const ProductItem = ({ data, pageContext }) => {
           title={fields.frontmatter.title}
         />
         <ArticleBody html={html} />
-        <h2 className="title">
-          書誌情報・通販
-            </h2>
+        <div className="content">
+          <h2>
+            書誌情報・通販
+          </h2>
+        </div>
         <BookList
           items={fields.frontmatter.books.map(book => ({
             title: book.title,
