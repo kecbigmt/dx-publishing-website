@@ -1,3 +1,12 @@
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+
+require('dotenv').config({
+  path: `.env.${activeEnv}.local`
+})
+
+console.log(`Environment: ${activeEnv}`)
+console.log(`Google Analytics Tracking Id: ${process.env.GA_TRACKING_ID}`)
+
 module.exports = {
   siteMetadata: {
     title: `DX出版`,
@@ -47,5 +56,11 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
   ],
 }
