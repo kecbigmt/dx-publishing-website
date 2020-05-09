@@ -11,6 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `DX出版`,
     description: `Amazonのプリント・オンデマンドでの出版を手掛ける出版者、DX出版のホームページ。DX出版の概要・書籍・お知らせなどをご覧いただけます。`,
+    siteUrl: `https://dx-publishing.jp/`,
     // TODO: Twitterアカウントを作ったときに追加。SEO設定をする
     // author: `@gatsbyjs`,
   },
@@ -60,6 +61,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [
+          `/contact-success`
+        ],
       },
     },
   ],
