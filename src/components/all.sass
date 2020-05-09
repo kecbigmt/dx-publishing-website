@@ -136,10 +136,11 @@ nav.breadcrumb
   li
     > a
       display: inline-block
-      max-width: 327px
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis 
+      @include mobile
+        max-width: 327px
 
 .icon-btn
   background: none
