@@ -5,6 +5,7 @@ import { navigate } from 'gatsby-link'
 import PageLayout from '../components/PageLayout'
 import PageHeader from '../components/PageHeader'
 import ArticleBody from '../components/ArticleBody'
+import { RequiredBadge, OptionalBadge } from '../components/TextBadge'
 import { SubmitButton } from '../components/Button'
 
 const encode = (data) => {
@@ -68,33 +69,48 @@ const ContactPage = ({ data, pageContext }) => {
         >
           <input type="hidden" name="form-name" value="website-contact" />
           <div className="field">
-            <label htmlFor="contact-name" className="label">お名前</label>
+            <div className="field-header">
+              <label htmlFor="contact-name" className="label">お名前</label>
+              <RequiredBadge />
+            </div>
             <div className="control">
-              <input type="text" id="contact-name" name="name" className="input" onChange={handleChange} />
+              <input type="text" id="contact-name" name="name" className="input" onChange={handleChange} required />
             </div>
           </div>
           <div className="field">
-            <label htmlFor="contact-belonging" className="label">会社名/学校名/所属先</label>
+            <div className="field-header">
+              <label htmlFor="contact-email" className="label">メールアドレス</label>
+              <RequiredBadge />
+            </div>
             <div className="control">
-              <input type="text" id="contact-belonging" name="belonging" className="input" onChange={handleChange} />
+              <input type="email" id="contact-email" name="email" className="input" onChange={handleChange} required />
             </div>
           </div>
           <div className="field">
-            <label htmlFor="contact-email" className="label">メールアドレス</label>
-            <div className="control">
-              <input type="email" id="contact-email" name="email" className="input" onChange={handleChange} />
+            <div className="field-header">
+              <label htmlFor="contact-tel" className="label">電話番号</label>
+              <OptionalBadge />
             </div>
-          </div>
-          <div className="field">
-            <label htmlFor="contact-tel" className="label">電話番号</label>
             <div className="control">
               <input type="tel" id="contact-tel" name="tel" className="input" onChange={handleChange} />
             </div>
           </div>
           <div className="field">
-            <label htmlFor="contact-message" className="label">お問い合わせ内容</label>
+            <div className="field-header">
+              <label htmlFor="contact-belonging" className="label">会社名/学校名/所属先</label>
+              <OptionalBadge />
+            </div>
             <div className="control">
-              <textarea id="contact-message" name="message" className="textarea" onChange={handleChange} />
+              <input type="text" id="contact-belonging" name="belonging" className="input" onChange={handleChange} />
+            </div>
+          </div>
+          <div className="field">
+            <div className="field-header">
+              <label htmlFor="contact-message" className="label">お問い合わせ内容</label>
+              <RequiredBadge />
+            </div>
+            <div className="control">
+              <textarea id="contact-message" name="message" className="textarea" onChange={handleChange} required />
             </div>
           </div>
           <div className="control">
