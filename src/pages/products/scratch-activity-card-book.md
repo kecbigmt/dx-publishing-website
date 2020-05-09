@@ -5,7 +5,7 @@ description: 「創造的な学び」を子供たちにもたらすプログラ�
 hasCover: true
 thumbnailImage: ../../images/scratch-activity-card-book/vol1.png
 thumbnailImageAlt: Vol1 表紙
-ogpImage: ../../images/Scratch-activity-card-Series.png
+ogpImage: ../../images/scratch-activity-card-book/ogp.png
 date: 2020-05-07
 books:
   -
