@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+import DefaultOGPImage from '../images/ogp-image.png'
+
+function SEO({ description, lang, meta, title, ogpImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,22 +20,22 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
     `
   )
 
+  const helmetTitle = title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
+  const metaOgpImage = ogpImage || DefaultOGPImage
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={helmetTitle}
       meta={[
         {
           name: `description`,
@@ -52,13 +54,20 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaOgpImage,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
+        // TODO: Twitterアカウントを作ったときに追加
+        /*
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
+        */
         {
           name: `twitter:title`,
           content: title,
@@ -73,7 +82,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ja`,
   meta: [],
   description: ``,
 }
@@ -82,7 +91,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO

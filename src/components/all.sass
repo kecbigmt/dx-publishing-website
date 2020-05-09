@@ -1,18 +1,21 @@
-$primary-color: #1A54B8;
-$secondary-color: #D22E05;
-$surface-color: #FFFFFF;
-$background-color: #f2f2f2;
+$primary-color: #1A54B8
+$secondary-color: #D22E05
+$surface-color: #FFFFFF
+$background-color: #f2f2f2
 
-$size-1: 2rem;
-$size-2: 1.8rem;
-$size-3: 1.6rem;
-$size-4: 1.4rem;
-$size-5: 1.2rem;
-$size-6: 1rem;
-$size-7: .8rem;
-$card-background-color: $surface-color;
-$background: $background-color;
-$card-shadow: none;
+$size-1: 2rem
+$size-2: 1.8rem
+$size-3: 1.6rem
+$size-4: 1.4rem
+$size-5: 1.2rem
+$size-6: 1rem
+$size-7: .8rem
+$card-background-color: $surface-color
+$background: $background-color
+$card-shadow: none
+$box-shadow: none
+$primary: #1A54B8
+$secondary: #D22E05
 
 @import "~bulma"
 
@@ -24,26 +27,134 @@ main
   margin-left: auto
   margin-right: auto
 
+.content
+  h1
+    font-size: 1.75rem
+    @include mobile
+      font-size: 1.6rem
+  h2
+    font-size: 1.6rem
+    @include mobile
+      font-size: 1.48rem 
+  h3
+    font-size: 1.45rem
+    @include mobile
+      font-size: 1.36rem
+  h4
+    font-size: 1.3rem
+    @include mobile
+      font-size: 1.24rem
+  h5
+    font-size: 1.15rem
+    @include mobile
+      font-size: 1.12rem
+  h6
+    font-size: 1.0rem
+
+.page-cover
+  &.with-background-image
+    background-size: cover
+    background-position: center
+    &.background-image-dark
+      overflow: hidden
+      position: relative
+      z-index: 0
+      &::before
+        content: ''
+        position: absolute
+        top: -5px
+        bottom: -5px
+        left: -5px
+        right: -5px
+        background: inherit
+        filter: blur(3px) brightness(0.6)
+        z-index: -1
+  .title
+    background-color: $secondary
+    color: $white
+    display: inline-block
+    padding: .25rem .5rem
+    font-size: $size-3
+    @include mobile
+      font-size: $size-5
+  .subtitle
+    color: $white
+    font-size: $size-5
+    @include mobile
+      font-size: $size-6
+
+.thumbnail
+  width: 120px !important
+  height: 120px !important
+  object-fit: cover
+  border-radius: $radius
+  @include mobile
+    width: 80px !important
+    height: 80px !important
+
+.article-body
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
+
+.page-header
+  width: 100%
+  margin-bottom: $block-spacing
+
 footer.footer
   > nav
+    margin-top: calc(#{$block-spacing} / 2)
+    margin-bottom: calc(#{$block-spacing} / 2)
     > ul
       display: flex
       flex-direction: row
       justify-content: center
-      margin-top: $block-spacing
-      margin-bottom: $block-spacing
       list-style: none
+      flex-wrap: wrap
       > li
-        display: inline-block
+        margin-top: .5rem
+        display: block
       > li::before
         content: "\200B"
       > li:nth-child(n+2)
         margin-left: $block-spacing
+  .copyright
+    margin-top: calc(#{$block-spacing} / 2)
+    margin-bottom: calc(#{$block-spacing} / 2)
+
+article.article
+  width: 100%
+  max-width: 680px
+
+  footer
+    margin-top: $block-spacing
+    margin-bottom: $block-spacing
+    .footnote
+      font-size: $size-7
+      color: $text-light
+
+nav.breadcrumb
+  li
+    > a
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis 
+      @include mobile
+        max-width: 327px
 
 .icon-btn
   background: none
   border: none
+
+
+.section-footer
+  display: flex
+  flex-direction: row
+  justify-content: center
+  margin-top: calc(#{$block-spacing} / 2)
+  margin-bottom: calc(#{$block-spacing} / 2)
   
+// Button component
 button
   &.navbar-item
     background: none
@@ -57,18 +168,60 @@ button
     &.is-active
       background-color: $navbar-item-hover-background-color
       color: $navbar-item-hover-color
+  :disabled
+    opacity: 0.5
+  &.is-dark
+    background-color: $dark
+    color: $white
 
+// BookCarousel component
 ul.carousel-list
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
-  display: flex
-  flex-direction: row
-  justify-content: center
-  li.carousel-item
-    list-style: none
-  li.carousel-item:nth-child(n+2)
-    margin-left: 1rem
+  list-style: none
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
+  @include mobile
+    overflow-x: auto
+    white-space: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: none
+    scrollbar-width: none
+    width: 100vw
+    padding-left: 2rem
+    padding-right: 2rem
+    &::-webkit-scrollbar
+      display: none
 
+  li.carousel-item
+    display: inline-block
+    a, span.disabled-link
+      display: inline-flex
+      flex-direction: column
+      .book-info
+        width: 150px
+        margin-top: 4px
+        span.book-price
+          font-size: $size-normal
+        span.book-title
+          margin-top: 4px
+          font-size: $size-small
+          font-weight: $weight-semibold
+          display: -webkit-box
+          -webkit-box-orient: vertical
+          -webkit-line-clamp: 2
+          overflow: hidden
+          white-space: normal
+      img
+        border-radius: $radius
+    a
+      color: $text
+      &:hover
+        color: $link
+    span.disabled-link
+      color: $text-light
+  li.carousel-item:nth-child(n+2)
+    margin-left: 1.5rem
+
+// Book Image component
 .book-image-figure
   display: inline-block
 
@@ -78,45 +231,48 @@ ul.carousel-list
   object-fit: cover
   border-radius: $radius
 
-.news-ul
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
+ul.book-list
+  margin-top: $block-spacing
+  margin-bottom: $block-spacing
+  img
+    border-radius: $radius
+  li
+    .book-article
+      display: flex
+      flex-direction: row
+      @include mobile
+        flex-direction: column
+        align-items: center
+      .book-image
+        flex: none
+        margin-right: 1rem
+        @include mobile
+         margin-bottom: 1rem
+    nav
+      margin-top: 1rem
 
-.news-li-thumbnail
-  width: 5rem
-  height: 5rem
-  object-fit: cover
+// ArticleList
+ul.article-list
+  width: 100%
+  @include mobile
+    padding: 0
+    background-color: transparent
+  a
+    color: $text
+    &:hover
+      color: $link
+  .article-title
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+  .article-excerpt
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
 
-.news-li
-  text-decoration: none
-  border-radius: $radius
-
-.news-li-content
-  display: flex
-  flex-direction: row
-
-.news-li-content
-  > *:nth-child(n+2)
-    margin-left: 1rem
-
-.news-li-title
-  display: -webkit-box
-  -webkit-box-orient: vertical
-  -webkit-line-clamp: 2
-  overflow: hidden
-  color: $text
-
-.news-li-time
-  display: inline-block
-
-.section-footer
-  display: flex
-  flex-direction: row
-  justify-content: center
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
-
-
+// Featured Text List
 ul.featured-text-list
   margin-top: calc(#{$block-spacing} / 2)
   margin-bottom: calc(#{$block-spacing} / 2)
@@ -128,12 +284,48 @@ ul.featured-text-list
     &:before
       content: ""
       display: inline-block
+      flex: none
       width: 2rem
       height: 2rem
       background: url('../images/star-list-icon.svg') no-repeat
       background-size: contain
     &:nth-child(n+2)
       margin-block-start: 1rem
+
+// Form
+.form-content
+  width: 100%
+  max-width: 680px
+.field-header
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-bottom: .5rem
+  label
+    margin-bottom: 0 !important
+  > *:nth-child(n+2)
+    margin-left: .5rem
+
+// TextBadge
+.text-badge
+  display: block
+  font-size: .7rem
+  padding: .25rem .5rem
+  border-radius: $radius
+  line-height: 1.5
+  font-weight: $weight-semibold
+  &.is-primary
+    color: $white
+    background-color: $primary
+  &.is-secondary
+    color: $white
+    background-color: $secondary
+  &.is-dark
+    color: $white
+    background-color: $grey-dark
+  &.is-light
+    color: $white
+    background-color: $grey-light
 
 // Helpers
 .is-flex-dir-row

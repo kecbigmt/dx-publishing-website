@@ -1,21 +1,15 @@
 ## About
-DX出版のホームページを作るためのリポジトリになる予定
+DX出版のホームページのソースコードを管理するリポジトリ
 
-## Template Format
-### News
-* id: 記事ID。URLに使われる。半角英数とハイフンだけで入力する
-* title: 記事のタイトル
-* date: 記事の配信日（表示するだけ。予約投稿機能はない）
-* thumbnailImagePath: 記事のサムネイルイメージ。リストでのサムネイルやOG画像として使われる
-```md
----
-id: my-first-post
-title: My First Post
-date: 2019-07-10
-thumbnailImagePath: ./my-first-post-thumbnail.jpg
----
+## Setup
+リポジトリをクローンしてから開発用のローカルWebサーバーを起動するまで
 
-This is my first Gatsby poste written in Markdown!
+```bash
+$ git clone git@github.com:kecbigmt/dx-publishing-website.git
+$ cd dx-publishing-website
+$ yarn install # 依存パッケージのインストール
+$ yarn global add gatsby-cli # Gatsby CLIのインストール
+$ yarn start 
 ```
 
 ## Copyright

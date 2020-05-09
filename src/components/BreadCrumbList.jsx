@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
  * @return JSX.Element
  */
 const BreadCrumbList = ({ items }) => (
-  <nav className="breadcrumb" aria-label="breadcrumbs">
+  <nav className="breadcrumb is-small" aria-label="breadcrumbs">
     <ul>
       {
         items.map((item, i) => (

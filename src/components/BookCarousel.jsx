@@ -1,23 +1,44 @@
 import React from 'react'
-
-import BookImage from './BookImage'
+import Img from 'gatsby-image'
 
 /**
  * Carousel component
  * @param {Object} props
- * @param {Array.<{key: string; src: string; alt: string;}>} items
+ * @param {Array.<{key: string; imageFile: object; imageAlt: string; title: string; price: string; url: string}>} items
  * @param {string} [className]
  */
-const Carousel = ({ items, className }) => (
-  <ul className={className ? ['carousel-list', className].join(' ') : 'carousel-list'}>
-    {
-      items.map(item => (
-        <li key={item.key} className="carousel-item">
-          <BookImage src={item.src} alt={item.alt} />
-        </li>
-      ))
-    }
-  </ul>
-)
+const Carousel = ({ items, className }) => {
+  return (
+    <ul className={className ? ['carousel-list', className].join(' ') : 'carousel-list'}>
+      {
+        items.map(item => {
+          const bookContent = (
+            <>
+              <Img fixed={item.imageFile} alt={item.imageAlt} />
+              <div className="book-info">
+                <span className="book-price">{item.price}</span>
+                <span className="book-title">{item.title}</span>
+              </div>
+            </>
+          )
+          return (
+            <li key={item.key} className="carousel-item">
+              {
+                item.url ? 
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {bookContent}
+                  </a>
+                  : 
+                  <span className="disabled-link">
+                    {bookContent}
+                  </span>
+              }
+            </li>
+          )
+        })
+      }
+    </ul>
+  )
+}
 
 export default Carousel

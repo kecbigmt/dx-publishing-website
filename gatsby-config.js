@@ -1,12 +1,33 @@
+const activeEnv = process.env.CONTEXT === 'production' ? 'production' : 'development'
+
+require('dotenv').config({
+  path: `.env.local`
+})
+
+console.log(`Environment: ${activeEnv}`)
+console.log(`Google Analytics Tracking Id: ${activeEnv === 'production' ? process.env.PROD_GA_TRACKING_ID : process.env.DEV_GA_TRACKING_ID}`)
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `DX出版`,
+    description: `Amazonのプリント・オンデマンドでの出版を手掛ける出版者、DX出版のホームページ。DX出版の概要・書籍・お知らせなどをご覧いただけます。`,
+    siteUrl: `https://dx-publishing.jp/`,
+    // TODO: Twitterアカウントを作ったときに追加。SEO設定をする
+    // author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,18 +35,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `DX出版`,
+        short_name: `DX出版`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#D9D7DC`,
+        theme_color: `#1a54b8`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/dx-publishing-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -35,16 +54,22 @@ module.exports = {
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [
+          `/contact-success`
+        ],
+      },
+    },
   ],
 }

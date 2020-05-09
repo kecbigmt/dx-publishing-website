@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <Link className="navbar-item" to="/">
             <img src={Logo} width="124" height="32" alt="logo" />
-          </a>
+          </Link>
 
           <button
             className={`icon-btn navbar-burger burger ${active ? 'is-active' : ''}`} 
@@ -44,9 +44,13 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-end">
-            <button className="navbar-item" onClick={() => console.log('english')}>
-              English
-            </button>
+            {
+              /**
+               * <button className="navbar-item" onClick={() => console.log('english')}>
+               *   English
+               * </button>
+               * */
+            }
             <div className="navbar-item">
               <div className="buttons">
                 <PurchaseLink color="primary" url="https://www.amazon.co.jp/dp/4910209018" />
