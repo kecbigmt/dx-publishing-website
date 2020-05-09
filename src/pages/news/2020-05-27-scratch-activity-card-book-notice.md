@@ -2,9 +2,9 @@
 templateKey: news-post
 title:  Scratchアクティビティ・カードブック・シリーズの出版開始のお知らせ
 description: Scratchアクティビティ・カードブック・シリーズの出版
-date: 2020-05-07
-featuredImage: ../../images/my-first-post.jpg
-featuredImageAlt: 帆船
+date: 2020-05-10
+featuredImage: ../../images/news/2020-05-10-scratch-activity-card-book-featured.jpg
+featuredImageAlt: Scratchアクティビティカードブック Vol1
 ---
 
 ## 新刊のご案内
