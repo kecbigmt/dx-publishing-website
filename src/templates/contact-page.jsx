@@ -59,6 +59,7 @@ const ContactPage = ({ data, pageContext }) => {
         />
         <ArticleBody html={html} />
         <form
+          name="website-contact"
           className="form box"
           method="post"
           data-netlify="true"
