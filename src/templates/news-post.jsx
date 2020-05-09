@@ -13,6 +13,7 @@ const NewsPost = ({ data, pageContext }) => {
     <PageLayout
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
+      ogpImage={fields.frontmatter.featuredImage.childImageSharp.fluid.src}
       breadcrumbs={pageContext.breadcrumbs}
     >
       <article className="article">
@@ -49,7 +50,7 @@ export const pageQuery = graphql`
           description
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 680) {
+              fluid(maxWidth: 1200) {
                 ...GatsbyImageSharpFluid
               }
             }

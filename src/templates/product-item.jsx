@@ -17,6 +17,7 @@ const ProductItem = ({ data, pageContext }) => {
     <PageLayout
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
+      ogpImage={frontmatter.ogpImage.childImageSharp.fluid.src}
       breadcrumbs={pageContext.breadcrumbs}
       hero={
         frontmatter.hasCover &&
@@ -78,6 +79,13 @@ export const pageQuery = graphql`
             }
           }
         }
+        ogpImage {
+          childImageSharp {
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug
@@ -96,13 +104,6 @@ export const pageQuery = graphql`
                 fixed(width: 150, height: 212) {
                   ...GatsbyImageSharpFixed
                 }
-              }
-            }
-          }
-          coverImage {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
               }
             }
           }

@@ -2,16 +2,16 @@
 templateKey: product-item
 title: Scratchアクティビティ カードブック・シリーズ
 description: 「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック
-coverImage: ../../images/my-first-post.jpg
 hasCover: true
-thumbnailImage: ../../images/my-first-post.jpg
-thumbnailImageAlt: 帆船
+thumbnailImage: ../../images/scratch-activity-card-book/vol1.png
+thumbnailImageAlt: Vol1 表紙
+ogpImage: ../../images/scratch-activity-card-book/ogp.png
 date: 2020-05-07
 books:
   -
     title: 名前を動かそう・音楽を作ろう編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行日：2020年4月30日 / サイズ・仕様：A5・フルカラー・44ページ / ISBN：9784910209012、定価：770円＋税
-    image: ../../images/creative-computing-workbook-vol1.png
+    image: ../../images/scratch-activity-card-book/vol1.png
     purchaseUrl: https://www.amazon.co.jp/dp/4910209018
     description___md: |
       **収録しているコーディングカード**
@@ -20,7 +20,7 @@ books:
   -
     title: キャラクターを動かそう・さあ、踊ろう編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年5月15日 / サイズ・仕様：A5・フルカラー・46ページ / ISBN：9784910209029、定価：770円＋税
-    image: ../../images/creative-computing-workbook-vol2.png
+    image: ../../images/scratch-activity-card-book/vol2.png
     purchaseUrl: "" 
     purchaseAltLabel: 5月15日発売予定 
     description___md: |
@@ -30,7 +30,7 @@ books:
   -
     title: 物語を作ろう・ビデオモーションセンサー編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年5月15日 / サイズ・仕様：A5・フルカラー・44ページ / ISBN：9784910209036、定価：770円＋税
-    image: ../../images/creative-computing-workbook-vol3.png
+    image: ../../images/scratch-activity-card-book/vol3.png
     purchaseUrl: "" 
     purchaseAltLabel: 5月15日発売予定 
     description___md: |
@@ -40,7 +40,7 @@ books:
   -
     title: ゲーム編
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年5月15日 / サイズ・仕様：A5・フルカラー・76ページ / ISBN：9784910209043、定価：1,050円＋税
-    image: ../../images/creative-computing-workbook-vol4.png
+    image: ../../images/scratch-activity-card-book/vol4.png
     purchaseUrl: "" 
     purchaseAltLabel: 5月15日発売予定 
     description___md: |

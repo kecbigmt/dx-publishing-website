@@ -4,11 +4,12 @@ import Layout from './Layout'
 import BreadCrumbList from './BreadCrumbList'
 import SEO from './seo'
 
-const PageLayout = ({ title, breadcrumbs, description, hero, children }) => (
+const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, children }) => (
   <Layout>
     <SEO
       title={title}
       description={description}
+      ogpImage={ogpImage}
     />
     { hero }
     <section className="section">
