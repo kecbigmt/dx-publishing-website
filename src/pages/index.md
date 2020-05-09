@@ -3,7 +3,7 @@ templateKey: top-page
 title: ホーム
 cover:
   title: 学びや探究に興味を持つ子どもたちのために
-  subtitle: 「創造的な学び」を子供たちにもたらす書籍や教材を子どもたちに届けます
+  subtitle: 「創造的な学び」をもたらす書籍や教材を子どもたちに届けます
   backgroundImage: ../images/top-cover.jpg
 featured:
   title: Scratchアクティビティ カードブック・シリーズ
