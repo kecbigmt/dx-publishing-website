@@ -28,7 +28,7 @@ const ContactPage = ({ data, pageContext }) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'contact',
+        'form-name': 'website-contact',
         ...state,
       }),
     })
@@ -65,7 +65,7 @@ const ContactPage = ({ data, pageContext }) => {
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="website-contact" />
           <div className="field">
             <label htmlFor="contact-name" className="label">お名前</label>
             <div className="control">
