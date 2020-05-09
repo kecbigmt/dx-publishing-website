@@ -1,11 +1,11 @@
-const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+const activeEnv = process.env.CONTEXT === 'production' ? 'production' : 'development'
 
 require('dotenv').config({
-  path: `.env.${activeEnv}.local`
+  path: `.env.local`
 })
 
 console.log(`Environment: ${activeEnv}`)
-console.log(`Google Analytics Tracking Id: ${process.env.GA_TRACKING_ID}`)
+console.log(`Google Analytics Tracking Id: ${activeEnv === 'production' ? process.env.PROD_GA_TRACKING_ID : process.env.DEV_GA_TRACKING_ID}`)
 
 module.exports = {
   siteMetadata: {
