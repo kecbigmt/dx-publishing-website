@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { navigate } from 'gatsby-link'
 
 import PageLayout from '../components/PageLayout'
-import PageHeader from '../components/PageHeader'
 import ArticleBody from '../components/ArticleBody'
 import { RequiredBadge, OptionalBadge } from '../components/TextBadge'
 import { SubmitButton } from '../components/Button'
@@ -55,10 +54,12 @@ const ContactPage = ({ data, pageContext }) => {
       breadcrumbs={pageContext.breadcrumbs}
     >
       <div className="container">
-        <PageHeader
-          title={fields.frontmatter.title}
-        />
-        <ArticleBody html={html} />
+        <div className="box bc-background">
+          <h1 className="title has-text-centered">
+            {fields.frontmatter.title}
+          </h1>
+          <ArticleBody html={html} />
+        </div>
         <form
           name="website-contact"
           className="form box"

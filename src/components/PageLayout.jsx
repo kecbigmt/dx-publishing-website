@@ -13,7 +13,7 @@ const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, children 
     />
     { hero }
     <section className="section bc-background">
-      <div className="container">
+      <div className="container has-breadcrumb">
         <div className="box bc-background">
           <BreadCrumbList
             items={breadcrumbs}

@@ -29,9 +29,9 @@ body
   background-color: $background
 
 .section
-  padding: 1rem
-  &:not(:first-child)
-    padding-top: 2.5rem
+  padding: $block-spacing
+  &:not(:last-child)
+    margin-bottom: 2.5rem
   background-color: $background
   h1, h2, h3, h4, h5, h6, .title, p, li
     color: $text-on-background
@@ -49,8 +49,11 @@ body
   .container
     width: 100%
     max-width: $container-width
-    &:nth-of-type(n+2)
-     margin-top: $block-spacing * 2
+    &.has-breadcrumb
+      margin-top: 1rem
+      margin-bottom: 1rem !important
+    &:not(:last-child)
+     margin-bottom: 2rem
     
     .box
       width: 100%
@@ -65,6 +68,9 @@ body
         color: $description-on-surface
       &.bc-background
         background-color: $background
+        padding: 0
+        @include mobile
+          padding: 0 1rem
         h1, h2, h3, h4, h5, h6, .title, p, li
           color: $text-on-background
         p.description
@@ -121,7 +127,6 @@ h3
   margin-bottom: calc(#{$block-spacing} / 2)
 
 nav.breadcrumb
-  margin-left: $block-spacing * -1
   @include mobile 
     margin-left: 0
   li
@@ -181,7 +186,6 @@ nav.breadcrumb
   margin-bottom: $block-spacing
 
 footer.footer
-  margin-top: 2rem
   > nav
     margin-top: calc(#{$block-spacing} / 2)
     margin-bottom: calc(#{$block-spacing} / 2)
