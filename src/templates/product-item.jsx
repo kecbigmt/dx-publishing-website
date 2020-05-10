@@ -29,16 +29,18 @@ const ProductItem = ({ data, pageContext }) => {
         />
       }
     >
-      <article className="article">
-        <PageHeader
-          title={fields.frontmatter.title}
-        />
-        <ArticleBody html={html} />
-        <div className="content">
-          <h2>
-            書誌情報・通販
-          </h2>
-        </div>
+      <div className="container">
+        <article className="box article">
+          <PageHeader
+            title={fields.frontmatter.title}
+          />
+          <ArticleBody html={html} />
+        </article>
+      </div>
+      <div className="container">
+        <h2 className="title has-text-centered">
+          書誌情報・通販
+        </h2>
         <BookList
           items={fields.frontmatter.books.map(book => ({
             title: book.title,
@@ -52,11 +54,13 @@ const ProductItem = ({ data, pageContext }) => {
         />
         {
           fields.frontmatter.footnote &&
-          <footer>
+          <footer className="container">
+            <div className="box bc-background">
               <div className="content footnote" dangerouslySetInnerHTML={{ __html: fields.frontmatter.footnote }}/>
+            </div>
           </footer>
         }
-      </article>
+      </div>
     </PageLayout>
   )
 }

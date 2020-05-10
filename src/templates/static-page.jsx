@@ -27,15 +27,12 @@ const StaticPage = ({ data, pageContext }) => {
         />
       }
     >
-      <article className="article">
+      <article className="box article">
         <PageHeader
           title={frontmatter.title}
         />
         <ArticleBody html={data.markdownRemark.html} />
       </article>
-      <footer>
-        <hr />
-      </footer>
     </PageLayout>
   )
 }

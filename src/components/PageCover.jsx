@@ -25,7 +25,7 @@ const PageCover = ({ title, subtitle, backgroundType, backgroundImageSrc }) => (
     <div className="hero-body">
       {
         title &&
-          <div className="container">
+          <div className="container is-flex is-flex-dir-column has-flex-item-centered">
             <p className="title">{ title }</p>
             {
               subtitle &&

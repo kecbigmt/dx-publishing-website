@@ -16,7 +16,7 @@ const NewsPost = ({ data, pageContext }) => {
       ogpImage={fields.frontmatter.featuredImage.childImageSharp.fluid.src}
       breadcrumbs={pageContext.breadcrumbs}
     >
-      <article className="article">
+      <article className="box article">
         <PageHeader
           title={fields.frontmatter.title}
           subtitle={new Date(fields.frontmatter.date).toLocaleDateString()}
@@ -28,9 +28,6 @@ const NewsPost = ({ data, pageContext }) => {
           </figure>
         }
         <ArticleBody html={html} />
-        <footer>
-          <hr />
-        </footer>
       </article>
     </PageLayout>
   )

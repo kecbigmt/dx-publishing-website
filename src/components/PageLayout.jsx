@@ -12,10 +12,14 @@ const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, children 
       ogpImage={ogpImage}
     />
     { hero }
-    <section className="section">
-      <BreadCrumbList
-        items={breadcrumbs}
-      />
+    <section className="section bc-background">
+      <div className="container">
+        <div className="box bc-background">
+          <BreadCrumbList
+            items={breadcrumbs}
+          />
+      </div>
+      </div>
       <main className="is-flex is-flex-dir-column has-flex-item-centered">
         {children}
       </main>

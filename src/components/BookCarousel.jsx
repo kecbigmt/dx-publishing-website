@@ -9,7 +9,7 @@ import Img from 'gatsby-image'
  */
 const Carousel = ({ items, className }) => {
   return (
-    <ul className={className ? ['carousel-list', className].join(' ') : 'carousel-list'}>
+    <ul className={['carousel-list', className].join(' ')}>
       {
         items.map(item => {
           const bookContent = (

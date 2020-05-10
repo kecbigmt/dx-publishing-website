@@ -54,7 +54,7 @@ const ContactPage = ({ data, pageContext }) => {
       description={fields.frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
     >
-      <div className="form-content">
+      <div className="container">
         <PageHeader
           title={fields.frontmatter.title}
         />

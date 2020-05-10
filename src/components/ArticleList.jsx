@@ -24,8 +24,8 @@ const ArticleList = ({ items }) => (
                   />
               }
               <div className="media-content">
-                <p className="article-title is-size-5 has-text-weight-semibold">{item.title}</p>
-                <p className="article-excerpt is-size-6 has-text-grey">
+                <p className="article-title">{item.title}</p>
+                <p className="article-excerpt description">
                   {
                     item.date && 
                       <><time dateTime={dt.toISOString()}>{dt.toLocaleDateString()}</time>&ensp;</>
