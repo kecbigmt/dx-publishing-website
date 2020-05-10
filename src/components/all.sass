@@ -104,6 +104,13 @@ h3
   h6:not(:first-child)
     margin-top: 2rem
     margin-bottom: $block-spacing
+  ul
+    &:not(:first-child)
+      margin-top: 2rem
+    &:not(:last-child)
+      margin-bottom: 2rem
+    li + li
+      margin-top: .75rem
 
 .section-footer
   width: 100%
