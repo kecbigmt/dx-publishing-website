@@ -1,6 +1,6 @@
 ---
 templateKey: static-page
-title: DX出版について
+title: DX出版とは
 description: "" 
 hasCover: true
 cover:

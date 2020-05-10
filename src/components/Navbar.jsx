@@ -36,7 +36,7 @@ const Navbar = () => {
               本の紹介
             </Link>
             <Link className="navbar-item" to="/about/">
-              DX出版とは？
+              DX出版とは
             </Link>
             <Link className="navbar-item" to="/contact/">
               問い合わせ
