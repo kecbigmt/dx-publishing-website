@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import PageLayout from '../components/PageLayout'
-import PageHeader from '../components/PageHeader'
 import ArticleList from '../components/ArticleList'
 
 const ProductsPage = ({ data, pageContext }) => {
@@ -14,17 +13,19 @@ const ProductsPage = ({ data, pageContext }) => {
       description={fields.frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
     >
-      <PageHeader
-        title={fields.frontmatter.title}
-      />
-      <ArticleList items={posts.map(post => ({
-        id: post.node.id,
-        title: post.node.fields.frontmatter.title,
-        excerpt: post.node.excerpt,
-        imageFile: post.node.fields.frontmatter.thumbnailImage && post.node.fields.frontmatter.thumbnailImage.childImageSharp.fixed,
-        imageAlt: post.node.fields.frontmatter.thumbnailImageAlt,
-        to: post.node.fields.slug,
-      }))} />
+      <div className="container">
+        <h1 className="title has-text-centered">
+          {fields.frontmatter.title}
+        </h1>
+        <ArticleList items={posts.map(post => ({
+          id: post.node.id,
+          title: post.node.fields.frontmatter.title,
+          excerpt: post.node.excerpt,
+          imageFile: post.node.fields.frontmatter.thumbnailImage && post.node.fields.frontmatter.thumbnailImage.childImageSharp.fixed,
+          imageAlt: post.node.fields.frontmatter.thumbnailImageAlt,
+          to: post.node.fields.slug,
+        }))} />
+      </div>
     </PageLayout>
   )
 }

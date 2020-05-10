@@ -22,58 +22,60 @@ const IndexPage = ({ data }) => {
         backgroundType="image-dark"
         backgroundImageSrc={frontmatter.cover.backgroundImage.childImageSharp.fluid.src}
       />
-      <main>
+      <section className="section bc-surface">
         <div className="container">
-        <section className="section">
-          <h1 className="title is-3">
-            { frontmatter.featured.title }
-          </h1>
-          <p>{ frontmatter.featured.description }</p>
-          <div className="is-flex is-flex-dir-column has-flex-item-centered">
-            <BookCarousel
-              items={frontmatter.featured.books.map(book => (
-                { 
-                  key: book.title, 
-                  title: book.title,
-                  imageFile: book.image.childImageSharp.fixed, 
-                  imageAlt: book.title, 
-                  price: book.price,
-                  url: book.url,
-                }
-              ))}
-            />
+          <header className="box featured-header">
+            <h1 className="title is-3 has-text-centered">
+              { frontmatter.featured.title }
+            </h1>
+            <p className="description">{ frontmatter.featured.description }</p>
+          </header>
+          <BookCarousel
+            items={frontmatter.featured.books.map(book => (
+              { 
+                key: book.title, 
+                title: book.title,
+                imageFile: book.image.childImageSharp.fixed, 
+                imageAlt: book.title, 
+                price: book.price,
+                url: book.url,
+              }
+            ))}
+          />
+          <div className="box">
             <FeaturedTextList
               items={frontmatter.featured.features.map(feature => (
                 { text: feature }
               ))}
             />
+            <footer className="section-footer">
+              <MoreDetailLink color="primary" to="/products/scratch-activity-card-book" />
+            </footer>
           </div>
-          <footer className="section-footer">
-            <MoreDetailLink color="primary" to="/products/scratch-activity-card-book" />
-          </footer>
-        </section>
-          <section className="section">
-            <h1 className="title is-3">
-              お知らせ
-            </h1>
-            <ArticleList items={posts.slice(0, 3).map(post => ({
-              id: post.node.id,
-              title: post.node.frontmatter.title,
-              date: post.node.frontmatter.date,
-              excerpt: post.node.excerpt,
-              imageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
-              imageAlt: post.node.frontmatter.featuredImageAlt,
-              to: post.node.fields.slug,
-            }))} />
-            {
-              posts.length > 3 &&
-                <footer className="section-footer">
-                  <NewsListLink color="primary" to="/news/" />
-                </footer>
-            }
-          </section>
         </div>
-      </main>
+      </section>
+      <section className="section bc-background">
+        <div className="container">
+          <h1 className="title is-3 has-text-centered">
+            お知らせ
+          </h1>
+          <ArticleList items={posts.slice(0, 3).map(post => ({
+            id: post.node.id,
+            title: post.node.frontmatter.title,
+            date: post.node.frontmatter.date,
+            excerpt: post.node.excerpt,
+            imageFile: post.node.frontmatter.featuredImage.childImageSharp.fixed,
+            imageAlt: post.node.frontmatter.featuredImageAlt,
+            to: post.node.fields.slug,
+          }))} />
+          {
+            posts.length > 3 &&
+              <footer className="section-footer">
+                <NewsListLink color="primary" to="/news/" />
+              </footer>
+          }
+        </div>
+      </section>
     </Layout>
   )
 }

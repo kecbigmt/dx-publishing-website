@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
             <li><Link to="/">トップ</Link></li>
             <li><Link to="/news/">お知らせ</Link></li>
             <li><Link to="/products/">本の紹介</Link></li>
-            <li><Link to="/about/">DX出版とは？</Link></li>
+            <li><Link to="/about/">DX出版とは</Link></li>
             <li><Link to="/contact/">問い合わせ</Link></li>
           </ul>
         </nav>

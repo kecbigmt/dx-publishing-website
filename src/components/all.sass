@@ -1,8 +1,10 @@
-$primary-color: #1A54B8
-$secondary-color: #D22E05
-$surface-color: #FFFFFF
-$background-color: #f2f2f2
+// Color Palette
+$primary: #1A54B8
+$secondary: #D22E05
+$surface: #FFFFFF
+$background: #f2f2f2
 
+// Font Size
 $size-1: 2rem
 $size-2: 1.8rem
 $size-3: 1.6rem
@@ -10,22 +12,72 @@ $size-4: 1.4rem
 $size-5: 1.2rem
 $size-6: 1rem
 $size-7: .8rem
-$card-background-color: $surface-color
-$background: $background-color
+
 $card-shadow: none
 $box-shadow: none
-$primary: #1A54B8
-$secondary: #D22E05
 
 @import "~bulma"
+
+$card-background-color: $surface
+$text-on-background: $black
+$description-on-background: $grey-darker
+$text-on-surface: $black
+$description-on-surface: $grey-dark
+$container-width: 778px
 
 body
   background-color: $background
 
-main
-  max-width: 960px
-  margin-left: auto
-  margin-right: auto
+.section
+  padding: $block-spacing
+  &:not(:last-child)
+    margin-bottom: 2.5rem
+  background-color: $background
+  h1, h2, h3, h4, h5, h6, .title, p, li
+    color: $text-on-background
+  p.description
+    color: $description-on-background
+  @include mobile
+    padding: 1rem 0
+  &.bc-surface
+    background-color: $surface
+    h1, h2, h3, h4, h5, h6, .title, p, li
+      color: $text-on-surface
+    p.description
+      color: $description-on-surface
+
+  .container
+    width: 100%
+    max-width: $container-width
+    &.has-breadcrumb
+      margin-top: 1rem
+      margin-bottom: 1rem !important
+    &:not(:last-child)
+     margin-bottom: 2rem
+    
+    .box
+      width: 100%
+      border-radius: 0
+      background-color: $surface
+      padding: 2rem
+      @include mobile
+        padding: $block-spacing 1rem
+      h1, h2, h3, h4, h5, h6, .title, p, li
+        color: $text-on-surface
+      p.description
+        color: $description-on-surface
+      &.bc-background
+        background-color: $background
+        padding: 0
+        @include mobile
+          padding: 0 1rem
+        h1, h2, h3, h4, h5, h6, .title, p, li
+          color: $text-on-background
+        p.description
+          color: $description-on-background
+
+h3
+  color: blue
 
 .content
   h1
@@ -37,7 +89,7 @@ main
     @include mobile
       font-size: 1.48rem 
   h3
-    font-size: 1.45rem
+    font-size: 1.45rem !important
     @include mobile
       font-size: 1.36rem
   h4
@@ -50,6 +102,41 @@ main
       font-size: 1.12rem
   h6
     font-size: 1.0rem
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child), 
+  h5:not(:first-child),
+  h6:not(:first-child)
+    margin-top: 2rem
+    margin-bottom: $block-spacing
+  ul
+    &:not(:first-child)
+      margin-top: 2rem
+    &:not(:last-child)
+      margin-bottom: 2rem
+    li + li
+      margin-top: .75rem
+
+.section-footer
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: center
+  margin-top: calc(#{$block-spacing} / 2)
+  margin-bottom: calc(#{$block-spacing} / 2)
+
+nav.breadcrumb
+  @include mobile 
+    margin-left: 0
+  li
+    > a
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis 
+      @include mobile
+        max-width: 327px
 
 .page-cover
   &.with-background-image
@@ -78,8 +165,10 @@ main
     @include mobile
       font-size: $size-5
   .subtitle
+    margin-top: $block-spacing
     color: $white
-    font-size: $size-5
+    font-size: $size-6
+    font-weight: $weight-semibold
     @include mobile
       font-size: $size-6
 
@@ -91,10 +180,6 @@ main
   @include mobile
     width: 80px !important
     height: 80px !important
-
-.article-body
-  margin-top: $block-spacing
-  margin-bottom: $block-spacing
 
 .page-header
   width: 100%
@@ -123,37 +208,23 @@ footer.footer
 
 article.article
   width: 100%
-  max-width: 680px
-
-  footer
+  max-width: $container-width
+  &.box
+    padding: $block-spacing
+    @include mobile
+    border-radius: 0px
+  .article-body:not(:first-child)
     margin-top: $block-spacing
-    margin-bottom: $block-spacing
-    .footnote
-      font-size: $size-7
-      color: $text-light
 
-nav.breadcrumb
-  li
-    > a
-      display: inline-block
-      overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis 
-      @include mobile
-        max-width: 327px
+
+.footnote
+  font-size: $size-7
+  color: $text-light
 
 .icon-btn
   background: none
   border: none
 
-
-.section-footer
-  display: flex
-  flex-direction: row
-  justify-content: center
-  margin-top: calc(#{$block-spacing} / 2)
-  margin-bottom: calc(#{$block-spacing} / 2)
-  
 // Button component
 button
   &.navbar-item
@@ -177,9 +248,14 @@ button
 // BookCarousel component
 ul.carousel-list
   list-style: none
-  margin-top: $block-spacing
-  margin-bottom: $block-spacing
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding-right: $block-spacing
+  padding-left: $block-spacing
   @include mobile
+    display: block
     overflow-x: auto
     white-space: nowrap
     -webkit-overflow-scrolling: touch
@@ -187,7 +263,6 @@ ul.carousel-list
     scrollbar-width: none
     width: 100vw
     padding-left: 2rem
-    padding-right: 2rem
     &::-webkit-scrollbar
       display: none
 
@@ -219,7 +294,7 @@ ul.carousel-list
     span.disabled-link
       color: $text-light
   li.carousel-item:nth-child(n+2)
-    margin-left: 1.5rem
+    margin-left: $block-spacing
 
 // Book Image component
 .book-image-figure
@@ -248,29 +323,52 @@ ul.book-list
         margin-right: 1rem
         @include mobile
          margin-bottom: 1rem
+      .book-content
+        .book-title
+        .book-content-body
+          font-size: $size-7
+          margin: 1rem 0
+          ul
+            &:not(:first-child)
+              margin-top: 1rem
+            &:not(:last-child)
+              margin-bottom: 1rem
+            li + li
+              margin-top: .25rem
+        .book-meta
+          font-size: $size-7
     nav
       margin-top: 1rem
 
 // ArticleList
 ul.article-list
   width: 100%
-  @include mobile
-    padding: 0
-    background-color: transparent
-  a
-    color: $text
-    &:hover
-      color: $link
-  .article-title
-    display: -webkit-box
-    -webkit-box-orient: vertical
-    -webkit-line-clamp: 2
-    overflow: hidden
-  .article-excerpt
-    display: -webkit-box
-    -webkit-box-orient: vertical
-    -webkit-line-clamp: 2
-    overflow: hidden
+  li
+    a
+      color: $text
+      &:hover
+        color: $link
+      .article-title
+        font-size: $size-5
+        font-weight: $weight-semibold
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        overflow: hidden
+        @include mobile
+          font-size: $size-6
+      .article-excerpt
+        font-size: $size-6
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        overflow: hidden
+        @include mobile
+          font-size: $size-7
+
+// Featured Header
+header.featured-header
+  margin-bottom: 0 !important
 
 // Featured Text List
 ul.featured-text-list
@@ -281,6 +379,8 @@ ul.featured-text-list
     display: flex
     flex-direction: center
     line-height: 2rem
+    font-weight: $weight-bold
+    color: $text-on-surface
     &:before
       content: ""
       display: inline-block
@@ -293,9 +393,6 @@ ul.featured-text-list
       margin-block-start: 1rem
 
 // Form
-.form-content
-  width: 100%
-  max-width: 680px
 .field-header
   display: flex
   flex-direction: row
