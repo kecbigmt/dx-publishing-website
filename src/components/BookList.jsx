@@ -20,8 +20,8 @@ const BookList = ({ items }) => (
                 <p className="book-title">
                   <strong>{item.title}</strong>
                 </p>
-                <div className="content is-size-7" dangerouslySetInnerHTML={{ __html: item.description }} />
-                <p className="is-size-7 has-text-grey">
+                <div className="book-content-body" dangerouslySetInnerHTML={{ __html: item.description }} />
+                <p className="book-meta description">
                   {item.meta}
                 </p>
               </div>

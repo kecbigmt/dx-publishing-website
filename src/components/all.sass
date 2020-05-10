@@ -319,6 +319,20 @@ ul.book-list
         margin-right: 1rem
         @include mobile
          margin-bottom: 1rem
+      .book-content
+        .book-title
+        .book-content-body
+          font-size: $size-7
+          margin: 1rem 0
+          ul
+            &:not(:first-child)
+              margin-top: 1rem
+            &:not(:last-child)
+              margin-bottom: 1rem
+            li + li
+              margin-top: .25rem
+        .book-meta
+          font-size: $size-7
     nav
       margin-top: 1rem
 
