@@ -53,7 +53,7 @@ const Navbar = () => {
             }
             <div className="navbar-item">
               <div className="buttons">
-                <PurchaseLink color="primary" url="https://www.amazon.co.jp/dp/4910209018" />
+                <PurchaseLink color="primary" url="https://www.amazon.co.jp/s?k=DX%E5%87%BA%E7%89%88&rh=n%3A2229003051" />
               </div>
             </div>
           </div>
