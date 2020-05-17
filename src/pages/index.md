@@ -20,17 +20,17 @@ featured:
       url: https://www.amazon.co.jp/dp/4910209018
     -
       title: Vol.2 キャラクターを動かそう・さあ、踊ろう編
-      image: ../images/scratch-activity-card-book/vol2-coming-soon.png
+      image: ../images/scratch-activity-card-book/vol2-on-sell.png
       price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209026
     -
       title: Vol.3 物語を作ろう・ビデオモーションセンサー編
-      image: ../images/scratch-activity-card-book/vol3-coming-soon.png
+      image: ../images/scratch-activity-card-book/vol3-on-sell.png
       price: "¥770+税"
       url: https://www.amazon.co.jp/dp/4910209034
     -
       title: Vol.4 ゲーム編
-      image: ../images/scratch-activity-card-book/vol4-coming-soon.png
+      image: ../images/scratch-activity-card-book/vol4-on-sell.png
       price: "¥1,050+税"
       url: https://www.amazon.co.jp/dp/4910209042
 ---
