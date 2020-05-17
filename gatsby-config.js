@@ -51,6 +51,8 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
+        // whitelist: ['p', 'a', 'ul', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+        whitelistPatternsChildren: [/^content$/],
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
