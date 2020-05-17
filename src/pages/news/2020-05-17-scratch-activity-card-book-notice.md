@@ -2,7 +2,7 @@
 templateKey: news-post
 title:  Scratchアクティビティ・カードブック・シリーズ第二弾を発刊
 description: DX出版は、「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第二弾として「キャラクターを動かそう・さあ、踊ろう編」、「物語を作ろう、ビデオモーションセンサー編」を発刊しました。
-date: 2020-05-18
+date: 2020-05-17
 featuredImage: ../../images/news/2020-05-17-scratch-activity-vol2-4-featured.jpg
 featuredImageAlt: Scratchアクティビティカードブック Vol2-4
 ---
