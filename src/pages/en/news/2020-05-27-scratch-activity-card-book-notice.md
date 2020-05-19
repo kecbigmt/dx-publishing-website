@@ -1,31 +1,31 @@
 ---
 templateKey: news-post
-title:  Scratchアクティビティ・カードブック・シリーズの出版開始のお知らせ
-description: DX出版は、「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第一弾として「名前を動かそう・音楽を作ろう編」を発刊しました。
+title:  Started publishing a series of Scratch Activity Card Books
+description: DX Publishing has published "Animate  Your Name /  Make Music" as the volume 1 of card book series for programming learning that brings "Creative Learning" to children.
 date: 2020-05-10
 featuredImage: ../../images/news/2020-05-10-scratch-activity-card-book-featured.jpg
-featuredImageAlt: Scratchアクティビティカードブック Vol1
+featuredImageAlt: Scratch Activity Card Book Series Vol.1
 ---
 
-## 新刊のご案内
-###Scratchアクティビティ カードブック・シリーズ Vol1
+## Announcement of new books
+###Scratch Activity Card Book Series Vol.1
 
-「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第一弾として「名前を動かそう・音楽を作ろう編」を発刊しました。
+Started publishing a series of "Animate  Your Name /  Make Music" as the volume 1 of card book series for programming learning that brings "Creative Learning" to children.
 
-### 特徴
+### Feature
 
-本書はMITメディアラボのScratchチームが公開しているコーディングカード（２テーマ分）を収録した小冊子です。本年度から必修となる小学生のプログラミング授業（C分類：教育課程内で各教科とは別に実施）の補助教材としてお使いいただけます。プログラミング学習をネット授業形式で行う際も、児童の手元に本書があることで、スムーズな授業運営を可能にします。
+This book is a booklet containing 2 kind of coding cards developed and shared by the Scratch team of MIT Media Lab(scratch.mit.edu).  It can be used as an auxiliary teaching material for programming classes for elementary school students (Categoly  C), which is mandatory from 2020. Even when conducting programming learning in the form of online internet class , having this book in the hands of children enables smooth class management.
 
-### 購入方法
-[Amazon](https://www.amazon.co.jp/dp/4910209018)からお買い求めいただけます。
+### Book Oder
+go to [Amazon](https://www.amazon.co.jp/dp/4910209018) to oder.
 
-## 今後の予定
+## Coming Soon
 
-5月中旬に以下の３巻を発刊予定です。
-* Vol.2 「キャラクターを動かそう・さあ、踊ろう編」
-* Vol.3 「物語を作ろう・ビデオモーションセンサー編」
-* Vol.4 「ゲーム編」
+The following three volumes will be published in mid-May.
+* Vol.2 Animate a Character / Let's Dance
+* Vol.3 Create a Story / Video Sensing
+* Vol.4 Game Collection
 
-シリーズ全体や各巻の詳細については、「[本の紹介/Scratchアクティビティ カードブック・シリーズ](https://dx-publishing.jp/products/scratch-activity-card-book/)」でご覧いただけます。
+If you would like to see the details, please go to "[Product/Scratch ASctivity Card Book Series](https://dx-publishing.jp/products/scratch-activity-card-book/)".
 
 

@@ -15,8 +15,8 @@ books:
     purchaseUrl: https://www.amazon.co.jp/dp/4910209018
     description___md: |
       **Including Coding Cards**
-      * Animate a Name: パソコンのディスプレイの中で文字を動かしたり、変化させたり、音がつけられることを体験できます
-      * Make Music: パソコンでドラムや太鼓などの音の鳴る物を作って音やリズムを奏でられることを体験できます
+      * Animate a Name: You can experience moving, changing objects, and making sounds on the computer display.
+      * Make Music: You can experience creating sounds and rhythms by making sound-producing objects such as drums and percussion instruments on your computer.
   -
     title: Animate a Character / Let's Dance
     meta: Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Publisher: DX Publishing / Publiciation date: May 15, 2020 / Size: A5(Full Color) / Print Length: 46 pages / ISBN：9784910209029 / Proce: 770JPY without TAX
@@ -25,8 +25,8 @@ books:
     purchaseAltLabel: "" 
     description___md: |
       **Including Coding Cards**
-      * Animate a Character: キャラクターのいろいろな動きを再現することでアニメーションの基本の動き作りを体験します
-      * Let's Dance: ミュージックとダンスの振り付けをアレンジしたダンスシーンのアニメーション作りを体験します
+      * Animate a Character: You can experience the basic movement making of animation by reproducing various movements of the character.
+      * Let's Dance: You can experience making dance scene animations that arrange music and dance choreography.
   -
     title: Create a Story / Video Sensing
     meta: Author: Natalie Rusk, Scratch Team / Translatior: Tetsushiro Oyama / Publisher: DX Publishing / Publiciation date: May 15, 2020 / Size: A5(Full Color) / Print Length: 44 pages / ISBN：9784910209036 / Proce: 770JPY without TAX
@@ -35,8 +35,8 @@ books:
     purchaseAltLabel: "" 
     description___md: |
       **Including Coding**
-      * Create a Story Cards: 登場人物が生き生きとおしゃべりする物語を作成する体験をします
-      * Video Sensing: ビデオモーションセンサーに反応するプロジェクトの作成を通して近未来の装置を想像します
+      * Create a Story Cards: You can experience creating stories that make the characters talk lively.
+      * Video Sensing: You can magine futre devices by creating projects that respond to video motion sensor.
   -
     title: Game version
     meta: Author: Natalie Rusk, Scratch Team / Translatior: Tetsushiro Oyama / Publisher: DX Publishing / Publiciation date: May 15, 2020 / Size: A5(Full Color) / Print Length: 76 pages / ISBN：9784910209043 / Proce: 1,050JPY without TAX
@@ -45,46 +45,44 @@ books:
     purchaseAltLabel: ""
     description___md: |
       **Including Coding Cards**
-      * Chase game Cards: 追跡してポイントをあげるゲームの作成を通して座標やゲームの基本処理を体験します
-      * Jumping Game: 動く障害物を飛び越えるゲームの作成を通してアニメーションの作り方の基礎を体験します
-      * Catch Game: 空から落ちてくる物をキャッチするゲームの作成を通して落下する運動のシミュレーションを体験します
-      * Pong Game: ボールがバウンドするゲームの作成を通してボールの動きのシミュレーションを体験します
+      * Chase game: You can experience the basic processing of the game by creating a game that tracks objects and get points,  learning concept of coordinate.
+      * Jumping Game: You can experience the basics of how to make animation by creating a game that jumps over moving obstacles.
+      * Catch Game: You can experience the simulation of falling motion by creating a game that catches objects falling from the sky.
+      * Pong Game: You can experience the simulation of ball movement by creating a game where the ball bounces.
   -
-    title: Geting Start with Scratch
+    title: Getting Started with Scratch
     meta: Author: Natalie Rusk, Scratch Team / Translatior: Tetsushiro Oyama / Publisher: DX Publishing / Publiciation Plam: Mid-Jun, 2020 / Size: A5(Full Color) / Print Length: 48 pages / ISBN：9784910209005 / Proce: 770JPY without TAX
     image: ../../images/scratch-activity-card-book/vol4.png
     purchaseUrl: "" 
     purchaseAltLabel: Publiciation Plan Jun 2020
     description___md: |
-      **Scratch初心者向けガイド**
-      * 簡単なプロジェクトを作成できるように優しく操作方法を説明します
-      * ユーザーインターフェース説明、簡単なプロジェクト作成手順、ブロックの説明が解説されています
+      **Scratch Beginner's Guide**
+      * You can understand the operation method gently so that you can create a simple project.
+      * Contain instruction of user interface , how to create simple project and block overview.
 
-      **収録しているコーディングカード**
-      * 世界を想像しよう：Scratchでできることを体験して、何でもできる世界を想像しましょう
-footnote___md: |
-  収録されているScratchコーディングカードは、クリエイティブコモン 表示 - 継承 4.0 国際 (CC BY-SA 4.0)のライセンスの元でScratchチーム(scratch.mit.edu) によって公開されており、大山哲志郎によって翻訳されました。Scratchの名称、ロゴ、Scratchキャット、Gobo、Pico、Nano、Tera及びGigaのグラフィックス(the "Marks")はScratch財団の登録商標です。本書ではコーディングカードの翻訳のために許可を受けて当該商標を使用しています。
+      **Including Coding Cards**
+      * Imagine the World: You can experience what you can do with Scratch and imagine a world where anything is possible.
+footnote___md: The Scratch Coding Cards by the Scratch Team (scratch.mit.edu) are shared under the CCbySA 4.0 license, translated by Tetsushiro Oyama. The Scratch name, logo, the Scratch Cat, Gobo, Pico, Nano, Tera and Giga graphics (the "Marks") are trademarks of the Scratch Foundation. They are used with permission for the purpose of translating the Coding Cards.
 
-  Scratchは、MITメディア・ラボのライフロング・キンダーガーテン・グループの協力により、Scratch財団が進めているプロジェクトです。[https://scratch.mit.edu](https://scratch.mit.edu)から自由に入手できます。また、コーディングカードは[https://scratch.mit.edu/ideas](https://scratch.mit.edu/ideas)でも参照できます。
+Scratch is a project of the Scratch Foundation, in collaboration with the Lifelong Kindergarten Group at the MIT Media Lab. It is available for free at https://scratch.mit.edu.
 ---
 
+This book is a programming learning card book that combines guides and coding cards for cycle of imagine, create and share on the projects. We have developed a series of four card books to help students to engage continuously their "Creative learning ".
 
-本書はプロジェクトを想像、創作して共有するためのガイドとコーディングカードをひとつにしたプログラミング学習用カードブックで、創造的な学びを持続できるよう4つの小冊子に分けてシリーズ化しました。
+The code (i.e. program) that is written on the cards is so simple that it takes only a few steps, so that students able to get  the concept of computational thinking while enjoying.
 
-記述されているコード（プログラムのこと）は数ステップと至ってシンプルなので、子どもたちは楽しみながらコンピュータ処理の基本的な概念に触れることができます。
+It also has the following features.
 
-他にも以下のような特徴を持っています。
+* Contains state-of-the-art programming learning materials developed by the Scratch Team (scratch.mit.edu) .
+* The long-awaited scratch 3.0 compatible Japanese coding card.
+* Easy access to introduction videos and shared projects with QR.
+* It is ideal for educational printed materials in elementary schools and after-school programs.
+* It is ideal for online education classes. Pre-printed materials facilitate interactive communication between students and teachers at remote locations.
 
-* MITのScratchチームが開発した最先端のプログラミング学習教材（コーディングカード）を収録
-* 待望のScratch3.0対応版コーディングカード
-* 紹介動画や共有プロジェクトにQRコードで簡単にアクセス
-* 小学校の教育現場、放課後プログラム（図書館、パソコンスクール、塾、CodeDojoなど）の教材として印刷の手間いらず
-* ネット授業に最適、印刷された教材を手元にあると離れた場所でも児童と教師の双方向コミュニケーションを促進
+Coding Cards are teaching materials for Scratch activities designed according to the "Four Guiding Principle", which is the basis of creative learning. It consists of “Project”, “Passion”, “Peers” and “Play”. The four Ps are the elements needed to develop creative thinking. 
 
-「コーディングカード」は、創造的な学びの基盤となる"4つのPの原則"に則ってデザインされたScratch アクティビティ用の教材です。4つのPとは、創造的思考を身につけるために必要とされている要素のことで、「プロジェクト（Project）」「情熱（Passion）」「仲間（Peers）」「遊び（Play）」から成ります。
+In addition, this book aims to be meterials like a Froebel gift for practicing "Montessori education," which fosters children's willingness to continue learning.
 
-さらに本書は、子どもが自発的に学び続ける姿勢を育てる「モンテッソーリ教育」を実践するための教具になることを目指しています。
+Based on this concept, we created the card books as a teaching material that brings "Creative Learning" to students. Just keep it handy and it will help students to concentrate to engage on programming by themselves.
 
-こうした考えに基づいて「創造的な学び」を子どもたちにもたらす教材として作成しました。手元に置いておくだけで、子どもたちが自発的にプログラミングに集中して取り組むのを手助けしてくれます。
-
-本書を活用することで、子どもたちは自発的にプロジェクトを創造したり、論理的な思考力を養ったり、デジタル音楽やデジタルアートに興味を持ったり、コミュニケーション力を高めたりすることができるようになるでしょう。
+By using this book, students will be able to spontaneously create projects, develop logical thinking skills, be interested in digital music and digital art, and enhance their communication skills.

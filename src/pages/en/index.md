@@ -3,7 +3,7 @@ templateKey: top-page
 title: Top 
 cover:
   title:  For children who are interested in learning and having spirit of inquiry
-  subtitle: Bringing children books and materials that bring "Creative learning"
+  subtitle: We deliver children's books and materials that bring  "Creative learning"
   backgroundImage: ../images/top-cover.jpg
 featured:
   title: Scratch Activity Card Book Series
