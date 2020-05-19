@@ -17,6 +17,7 @@ Started publishing a series of "Animate  Your Name /  Make Music" as the volume 
 This book is a booklet containing 2 kind of coding cards developed and shared by the Scratch team of MIT Media Lab(scratch.mit.edu).  It can be used as an auxiliary teaching material for programming classes for elementary school students (Categoly  C), which is mandatory from 2020. Even when conducting programming learning in the form of online internet class , having this book in the hands of children enables smooth class management.
 
 ### Book Oder
+
 go to [Amazon](https://www.amazon.co.jp/dp/4910209018) to oder.
 
 ## Coming Soon

@@ -1,31 +1,30 @@
 ---
 templateKey: news-post
-title:  Scratchアクティビティ・カードブック・シリーズ第二弾を発刊
-description: DX出版は、「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第二弾として「キャラクターを動かそう・さあ、踊ろう編」、「物語を作ろう、ビデオモーションセンサー編」を発刊しました。
+title:  Published the second series of Scratch Activity Card Books
+
+description: DX Publishing has published "Animate a Character / Let's Dance", "Create a Story / Video Sensing", and "" as the volume 1 of card book series for programming learning that brings "Creative Learning" to children.
+
 date: 2020-05-17
 featuredImage: ../../images/news/2020-05-17-scratch-activity-vol2-4-featured.jpg
-featuredImageAlt: Scratchアクティビティカードブック Vol2-4
+featuredImageAlt: Scratch Activity Card Books Vol.2-4
 ---
 
-## 新刊のご案内
-###Scratchアクティビティ カードブック・シリーズ Vol2-4
+## Announcement of new books
+###Scratch Activity Card Book Series Vol.2-4
 
-「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第二弾として「キャラクターを動かそう・さあ、踊ろう編」、「物語を作ろう、ビデオモーションセンサー編」を発刊しました。
+Published "Animate a Character / Let's Dance", "Create a Story / Video Sensing", and "" as the volume 1 of card book series for programming learning that brings "Creative Learning" to children.
 
-### 特徴
+### Feature
+Vol.2 and Vol.3 contain 2 kind of coding cards developed and shared by the Scratch team of MIT Media Lab(scratch.mit.edu).  It can be used as an auxiliary teaching material for programming classes for elementary school students (Categoly  C), which is mandatory from 2020. In addition, the game edition (Vol.4) includes coding cards (for 4 themes) that children can enjoy themselves and create games. Even when conducting programming learning in the form of online internet class , having this book in the hands of children enables smooth class management.
 
-Vol.2とVol.3は、MITメディアラボのScratchチームが公開しているコーディングカード（2テーマ分）を収録した小冊子です。
-本年度から必修となる小学生のプログラミング授業（C分類：教育課程内で各教科とは別に実施）の補助教材としてお使いいただけます。
+### Book Oder
 
-また、ゲーム編（Vol.4）には児童が自ら楽しんでゲームを制作できるコーディングカード（4テーマ分）を収録しています。プログラミング学習をネット授業形式で行う際も、児童の手元に本書があることで、スムーズな授業運営を可能にします。
+go to [Amazon](https://www.amazon.co.jp/s?k=DX出版&rh=n%3A2229003051&__mk_ja_JP=カタカナ) to oder.
 
-### 購入方法
-[Amazon](https://www.amazon.co.jp/s?k=DX出版&rh=n%3A2229003051&__mk_ja_JP=カタカナ)からお買い求めいただけます。
-
-## 今後の予定
+## Coming Soon
 
 6月中旬に初心者入門編を発刊予定です。
+The ”Getting Started with Scratch” will be published in mid-Jun.
 
-シリーズ全体や各巻の詳細については、「[本の紹介/Scratchアクティビティ カードブック・シリーズ](https://dx-publishing.jp/products/scratch-activity-card-book/)」でご覧いただけます。
-
+If you would like to see the details, please go to "[Product/Scratch ASctivity Card Book Series](https://dx-publishing.jp/products/scratch-activity-card-book/)".
 
