@@ -12,6 +12,7 @@ featured:
     - MITのScratchチームが開発した最先端のプログラミング学習教材を収録
     - 待望のScratch3.0対応版コーディングカード
     - 小学校の教育現場、放課後プログラムの教材に最適
+  link: /ja/products/scratch-activity-card-book
   books:
     -
       title: Vol.1 名前を動かそう・音楽を作ろう編

@@ -52,7 +52,7 @@ const IndexPage = ({ data, pageContext }) => {
               ))}
             />
             <footer className="section-footer">
-              <MoreDetailLink label={localeSet[locale].label.button.more} color="primary" to="/products/scratch-activity-card-book" />
+              <MoreDetailLink label={localeSet[locale].label.button.more} color="primary" to={frontmatter.featured.link} />
             </footer>
           </div>
         </div>
@@ -103,6 +103,7 @@ export const pageQuery = graphql`
           title
           description
           features
+          link
           books {
             title
             price
