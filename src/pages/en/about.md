@@ -26,11 +26,9 @@ The publishing industry hasn't tackled digital transformation either. Now, digit
 We believe that the new business model of the publishing industry is the new style of publishing that responds to diversifying reader needs by utilizing print-on-demand.
 
 ### Why we need printed books?
-The spread of smartphones and the expansion of subscription services have made it easier for us to read e-books, but books printed as paper media bring various value to readers.Information read with e-books is hard to remember and can be forgotten in a short period of time, but printed books exist for decades not only when they are read,It reminds us of our memory when we read the books.
-
-From now on, e-books may be created first, and only the books you want to keep may be left as paper media.
+The spread of smartphones and the expansion of subscription services have made it easier for us to read e-books, but books printed as paper media bring various value to readers. Information read with e-books is hard to remember and can be forgotten in a short period of time, but printed books exist for decades not only when they are read, It reminds us of our memory when we read the books.
 
 ## Mission
-We will help to increase the number of children who are interested in learning and having spirit of inquiry by providing quality learning materials and books. Therefore, we will find good books and deliver them to our readers quickly.
+We will help to increase the number of children who are interested in learning and having spirit of inquiry by providing quality learning materials and books. For this, we will find good books and deliver them to our readers quickly.
 
 Publisher: DX Publishing　
