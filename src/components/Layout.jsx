@@ -34,7 +34,7 @@ const Layout = ({ children, localeSet }) => {
     if (pathname.startsWith('/ja') || pathname.startsWith('/en')) {
       navigate(`/${locale}${pathname.slice(3)}`)
     }
-  }, [locale])
+  }, [locale, pathname])
 
   const onClickLangButton = () => {
     if (locale === 'ja') {
