@@ -2,7 +2,6 @@ import React, { useState }  from 'react'
 import { Link } from 'gatsby'
 
 import { PurchaseLink } from './Button'
-import Logo from '../images/logo.svg'
 
 /**
  * Navbar component
