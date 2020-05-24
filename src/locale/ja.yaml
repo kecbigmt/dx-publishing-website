@@ -14,6 +14,7 @@ label:
     toTop: トップページに移動
   section:
     news: お知らせ
+    productDetails: 書誌情報・通販
   contactForm:
     name: お名前
     email: メールアドレス

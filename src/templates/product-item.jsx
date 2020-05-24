@@ -43,7 +43,7 @@ const ProductItem = ({ data, pageContext }) => {
       </div>
       <div className="container">
         <h2 className="title has-text-centered">
-          書誌情報・通販
+          {localeSet[locale].label.section.productDetails}
         </h2>
         <BookList
           purchaseButtonLabel={localeSet[locale].label.button.purchase}
