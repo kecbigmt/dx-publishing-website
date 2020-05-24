@@ -65,7 +65,7 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'butto
  * @param {string} [props.className] 
  */
 export const PurchaseLink = (props) => (
-  <Button tag='a' label='通販サイト' icon='external' {...props}/>
+  <Button tag='a' label={props.label} icon='external' {...props}/>
 )
 
 /**
