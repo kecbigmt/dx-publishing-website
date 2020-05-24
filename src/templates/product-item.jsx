@@ -26,7 +26,7 @@ const ProductItem = ({ data, pageContext }) => {
       hero={
         frontmatter.hasCover &&
         <PageCover
-          title="本の紹介"
+          title={localeSet[locale].label.navigation.products}
           subtitle={frontmatter.title}
           backgroundType={backgroundImageSrc ? 'image-dark' : undefined}
           backgroundImageSrc={backgroundImageSrc}
