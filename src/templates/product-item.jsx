@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { graphql } from 'gatsby'
 
 import PageLayout from '../components/PageLayout'
@@ -6,6 +6,7 @@ import PageCover from '../components/PageCover'
 import PageHeader from '../components/PageHeader'
 import ArticleBody from '../components/ArticleBody'
 import BookList from '../components/BookList'
+import LocaleContext from '../context/LocaleContext'
 
 const ProductItem = ({ data, pageContext }) => {
   const { markdownRemark } = data // data.markdownRemark holds post data
@@ -13,13 +14,15 @@ const ProductItem = ({ data, pageContext }) => {
   const backgroundImageSrc = frontmatter.cover 
                               && frontmatter.cover.backgroundImage
                                 && frontmatter.cover.backgroundImage.childImageSharp.fluid.src
+  const { localeSet } = pageContext
+  const { locale } = useContext(LocaleContext)
   return (
     <PageLayout
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
       ogpImage={frontmatter.ogpImage.childImageSharp.fluid.src}
       breadcrumbs={pageContext.breadcrumbs}
-      localeSet={pageContext.localeSet}
+      localeSet={localeSet}
       hero={
         frontmatter.hasCover &&
         <PageCover
@@ -43,6 +46,7 @@ const ProductItem = ({ data, pageContext }) => {
           書誌情報・通販
         </h2>
         <BookList
+          purchaseButtonLabel={localeSet[locale].label.button.purchase}
           items={fields.frontmatter.books.map(book => ({
             title: book.title,
             description: book.description,

@@ -7,8 +7,9 @@ import { PurchaseLink, PurchaseAltButton } from './Button'
  * BookList component
  * @param {Object} props
  * @param {Array.<{title: string; description: string; meta: string; url: string; imageFile: object; imageAlt: string; altLabel?: string }>} props.items
+ * @param {string} props.purchaseButtonLabel
  */
-const BookList = ({ items }) => (
+const BookList = ({ items, purchaseButtonLabel }) => (
   <ul className="book-list">
     {
       items.map(item => (
@@ -30,7 +31,8 @@ const BookList = ({ items }) => (
           <nav>
             {
               item.url ?
-                <PurchaseLink className="is-fullwidth" color="primary" url={item.url} size="small" />
+                <PurchaseLink label={purchaseButtonLabel} className="is-fullwidth" color="primary" url={item.url} size="small"
+                />
                   : <PurchaseAltButton label={item.altLabel} className="is-fullwidth" color="dark" size="small" />
             }
           </nav>
