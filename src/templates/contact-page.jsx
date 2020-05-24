@@ -44,7 +44,7 @@ const ContactPage = ({ data, pageContext }) => {
         setLoading(false)
       })
       .catch(() => {
-        alert(localeSet[locale].label.alert.failedToSubmit)
+        alert(localeSet[locale].label.alert.failToSubmit)
         setLoading(false)
       })
     setLoading(true)
