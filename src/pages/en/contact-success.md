@@ -4,6 +4,6 @@ title: Contact us
 description: ""
 color: light
 message:
-  title: The transmission was successful.
+  title: Successfully Submitted
   description: ""
 ---

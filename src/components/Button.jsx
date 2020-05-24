@@ -102,7 +102,7 @@ export const MoreDetailLink = (props) => (
  * @param {string} [props.className] 
  */
 export const NewsListLink = (props) => (
-  <Button tag="Link" label="お知らせ一覧" icon="more" {...props}/>
+  <Button tag="Link" label={props.label} icon="more" {...props}/>
 )
 
 /**
@@ -114,7 +114,7 @@ export const NewsListLink = (props) => (
  * @param {string} [props.className] 
  */
 export const SubmitButton = (props) => (
-  <Button tag="button" type="submit" label="送信" icon="submit" {...props}/>
+  <Button tag="button" type="submit" label={props.label} icon="submit" {...props}/>
 )
 
 
@@ -127,5 +127,5 @@ export const SubmitButton = (props) => (
  * @param {string} [props.className] 
  */
 export const ToTopButton = (props) => (
-  <Button tag="Link" label="トップページに移動" icon="more" to="/" {...props}/>
+  <Button tag="Link" label={props.label} icon="more" to="/" {...props}/>
 )

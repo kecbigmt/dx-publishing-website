@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { ToTopButton } from '../components/Button'
+import LocaleContext from '../context/LocaleContext'
 
 const MessagePage = ({ data, pageContext }) => {
   const { frontmatter } = data.markdownRemark
+  const { localeSet } = pageContext
+  const { locale } = useContext(LocaleContext)
   return (
     <Layout
-      localeSet={pageContext.localeSet}
+      localeSet={localeSet}
     >
       <SEO
         title={frontmatter.title}
@@ -29,7 +32,7 @@ const MessagePage = ({ data, pageContext }) => {
                   </p>
                 </div>
             }
-            <ToTopButton />
+            <ToTopButton label={localeSet[locale].label.button.toTop} />
           </div>
         </div>
       </section>

@@ -15,18 +15,20 @@ const TextBadge = ({ label, className }) => (
  * RequiredBadge component
  * @param {Object} props
  * @param {string} [props.className]
+ * @param {string} [props.label]
  * @return {JSX.Element}
  */
-export const RequiredBadge = ({ className }) => (
-  <TextBadge label="必須" className={['is-secondary', className].join(' ')} />
+export const RequiredBadge = ({ className, label }) => (
+  <TextBadge label={label} className={['is-secondary', className].join(' ')} />
 )
 
 /**
  * OptionalBadge component
  * @param {Object} props
  * @param {string} [props.className]
+ * @param {string} [props.label]
  * @return {JSX.Element}
  */
-export const OptionalBadge = ({ className }) => (
-  <TextBadge label="任意" className={['is-light', className].join(' ')} />
+export const OptionalBadge = ({ className, label }) => (
+  <TextBadge label={label} className={['is-light', className].join(' ')} />
 )
