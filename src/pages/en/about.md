@@ -1,6 +1,6 @@
 ---
 templateKey: static-page
-title: About DX Pbulishing
+title: About DX Publishing
 description: "" 
 hasCover: true
 cover:
