@@ -4,7 +4,7 @@ title: About DX Pbulishing
 description: "" 
 hasCover: true
 cover:
-  backgroundImage: ../images/about-cover.jpg
+  backgroundImage: ../../images/about-cover.jpg
 ---
 
 DX Publishing is publisher who publishing [Amazon print-on-demand](https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201998960). So, Amazon is the only bookstore that sells books published by DX Publishing.

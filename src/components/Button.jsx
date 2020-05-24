@@ -33,14 +33,15 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'butto
           color === 'dark' ? 'is-dark' : color === 'secondary' ? 'is-secondary' : 'is-primary',
           size === 'small' ? 'is-small' : 'is-normal',
           className,
-        ].join(' ')} 
-        href={url} 
-        onClick={onClick} 
-        to={to}
-        target={ tag === 'a' ? '_blank' : undefined}
-        rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
-        type={ tag === 'button' ? type : undefined }
-        disabled={disabled ? true : undefined}
+        ].join(' ')
+      } 
+      href={url} 
+      onClick={onClick} 
+      to={to}
+      target={ tag === 'a' ? '_blank' : undefined}
+      rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
+      type={ tag === 'button' ? type : undefined }
+      disabled={disabled ? true : undefined}
     >
       {
         label && <span>{ label }</span>
@@ -76,19 +77,20 @@ export const PurchaseLink = (props) => (
  * @param {string} [props.className] 
  */
 export const PurchaseAltButton = (props) => (
-  <Button tag="button" label={props.label || '通販サイト'} icon={props.label ? undefined : 'external'} disabled={true} {...props} />
+  <Button tag="button" label={props.label} icon={props.label ? undefined : 'external'} disabled={true} {...props} />
 )
 
 /**
  * MoreDetailLink
  * @param {Object} props
  * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
+ * @param {string} [props.url]
  * @param {to} props.to
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
  */
 export const MoreDetailLink = (props) => (
-  <Button tag="Link" label="もっと詳しく" icon="more" {...props}/>
+  <Button tag="Link" label={props.label || 'もっと詳しく'} icon="more" {...props}/>
 )
 
 /**

@@ -4,7 +4,7 @@ title: DX出版とは
 description: "" 
 hasCover: true
 cover:
-  backgroundImage: ../images/about-cover.jpg
+  backgroundImage: ../../images/about-cover.jpg
 ---
 
 DX出版は、[Amazonのプリント・オン・デマンド](https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201998960)での出版を手掛ける出版者です。このためDX出版から発刊する書籍を扱う書店はAmazonだけです。

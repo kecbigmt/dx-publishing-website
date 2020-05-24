@@ -4,8 +4,10 @@ import Layout from './Layout'
 import BreadCrumbList from './BreadCrumbList'
 import SEO from './seo'
 
-const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, children }) => (
-  <Layout>
+const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, localeSet, children }) => (
+  <Layout
+    localeSet={localeSet}
+  >
     <SEO
       title={title}
       description={description}

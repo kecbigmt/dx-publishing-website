@@ -3,7 +3,7 @@ templateKey: news-post
 title:  Scratchアクティビティ・カードブック・シリーズの出版開始のお知らせ
 description: DX出版は、「創造的な学び」を子供たちにもたらすプログラミング学習用カードブック シリーズの第一弾として「名前を動かそう・音楽を作ろう編」を発刊しました。
 date: 2020-05-10
-featuredImage: ../../images/news/2020-05-10-scratch-activity-card-book-featured.jpg
+featuredImage: ../../../images/news/2020-05-10-scratch-activity-card-book-featured.jpg
 featuredImageAlt: Scratchアクティビティカードブック Vol1
 ---
 

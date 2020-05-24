@@ -3,7 +3,7 @@ templateKey: news-post
 title:  Started publishing a series of Scratch Activity Card Books
 description: DX Publishing has published "Animate  Your Name /  Make Music" as the volume 1 of card book series for programming learning that brings "Creative Learning" to children.
 date: 2020-05-10
-featuredImage: ../../images/news/2020-05-10-scratch-activity-card-book-featured.jpg
+featuredImage: ../../../images/news/2020-05-10-scratch-activity-card-book-featured.jpg
 featuredImageAlt: Scratch Activity Card Book Series Vol.1
 ---
 

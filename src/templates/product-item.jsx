@@ -19,6 +19,7 @@ const ProductItem = ({ data, pageContext }) => {
       description={fields.frontmatter.description}
       ogpImage={frontmatter.ogpImage.childImageSharp.fluid.src}
       breadcrumbs={pageContext.breadcrumbs}
+      localeSet={pageContext.localeSet}
       hero={
         frontmatter.hasCover &&
         <PageCover

@@ -1,0 +1,13 @@
+label:
+  navigation:
+    top: トップ
+    news: お知らせ
+    products: 本の紹介
+    about: DX出版とは
+    contact: 問い合わせ
+  button:
+    language: English
+    purchase: 通販サイト
+    more: もっと詳しく
+  section:
+    news: お知らせ

@@ -5,7 +5,7 @@ title:  Published the second series of Scratch Activity Card Books
 description: DX Publishing has published "Animate a Character / Let's Dance", "Create a Story / Video Sensing", and "" as the volume 1 of card book series for programming learning that brings "Creative Learning" to children.
 
 date: 2020-05-17
-featuredImage: ../../images/news/2020-05-17-scratch-activity-vol2-4-featured.jpg
+featuredImage: ../../../images/news/2020-05-17-scratch-activity-vol2-4-featured.jpg
 featuredImageAlt: Scratch Activity Card Books Vol.2-4
 ---
 

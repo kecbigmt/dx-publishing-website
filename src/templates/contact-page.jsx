@@ -52,6 +52,7 @@ const ContactPage = ({ data, pageContext }) => {
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
+      localeSet={pageContext.localeSet}
     >
       <div className="container">
         <div className="box bc-background">

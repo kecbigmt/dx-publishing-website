@@ -5,10 +5,12 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { ToTopButton } from '../components/Button'
 
-const MessagePage = ({ data }) => {
+const MessagePage = ({ data, pageContext }) => {
   const { frontmatter } = data.markdownRemark
   return (
-    <Layout>
+    <Layout
+      localeSet={pageContext.localeSet}
+    >
       <SEO
         title={frontmatter.title}
         description={frontmatter.description || undefined}

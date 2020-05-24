@@ -12,6 +12,7 @@ const NewsPage = ({ data, pageContext }) => {
       title={fields.frontmatter.title}
       description={fields.frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
+      localeSet={pageContext.localeSet}
     >
       <div className="container">
         <h1 className="title has-text-centered">
@@ -32,7 +33,7 @@ const NewsPage = ({ data, pageContext }) => {
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $localeRegex: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
         slug
@@ -44,7 +45,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]}
-      filter: { frontmatter: { templateKey: { eq: "news-post" } } }
+      filter: { fileAbsolutePath: { regex: $localeRegex }, frontmatter: { templateKey: { eq: "news-post" } } }
       limit: 50
     ) {
       edges {

@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useContext } from 'react'
 import { graphql } from 'gatsby'
 
+import LocaleContext from '../context/LocaleContext'
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PageCover from '../components/PageCover'
@@ -10,11 +11,13 @@ import { MoreDetailLink } from '../components/Button'
 import { NewsListLink } from '../components/Button'
 import ArticleList from "../components/ArticleList"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext }) => {
   const { frontmatter } = data.markdownRemark
   const { edges: posts } = data.allMarkdownRemark
+  const { locale } = useContext(LocaleContext)
+  const { localeSet } = pageContext
   return (
-    <Layout>
+    <Layout localeSet={localeSet}>
       <SEO />
       <PageCover
         title={frontmatter.cover.title}
@@ -49,7 +52,7 @@ const IndexPage = ({ data }) => {
               ))}
             />
             <footer className="section-footer">
-              <MoreDetailLink color="primary" to="/products/scratch-activity-card-book" />
+              <MoreDetailLink label={localeSet[locale].label.button.more} color="primary" to="/products/scratch-activity-card-book" />
             </footer>
           </div>
         </div>
@@ -57,7 +60,7 @@ const IndexPage = ({ data }) => {
       <section className="section bc-background">
         <div className="container">
           <h1 className="title is-3 has-text-centered">
-            お知らせ
+            { localeSet[locale].label.section.news }
           </h1>
           <ArticleList items={posts.slice(0, 3).map(post => ({
             id: post.node.id,
@@ -81,7 +84,7 @@ const IndexPage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery($id: String!) {
+  query IndexQuery($id: String!, $localeRegex: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -117,7 +120,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]}
-      filter: { frontmatter: { templateKey: { eq: "news-post" } } }
+      filter: { fileAbsolutePath: { regex: $localeRegex }, frontmatter: { templateKey: { eq: "news-post" } } }
       limit: 4
     ) {
       edges {

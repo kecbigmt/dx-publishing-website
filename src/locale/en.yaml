@@ -1,0 +1,13 @@
+label:
+  navigation:
+    top: Top
+    news: News
+    products: Products
+    about: About
+    contact: Contact
+  button:
+    language: 日本語
+    purchase: Purchase
+    more: More
+  section:
+    news: News

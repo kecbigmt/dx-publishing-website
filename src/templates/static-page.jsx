@@ -16,6 +16,7 @@ const StaticPage = ({ data, pageContext }) => {
       title={frontmatter.title}
       description={frontmatter.description}
       breadcrumbs={pageContext.breadcrumbs}
+      localeSet={pageContext.localeSet}
       hero={
         frontmatter.hasCover &&
         <PageCover

@@ -1,10 +1,19 @@
-import React, { useState }  from "react"
-import { Link } from "gatsby"
+import React, { useState }  from 'react'
+import { Link } from 'gatsby'
 
 import { PurchaseLink } from './Button'
 import Logo from '../images/logo.svg'
 
-const Navbar = () => {
+/**
+ * Navbar component
+ * @param {Object} props
+ * @param {Array.<{to: string; label: string}>} props.links
+ * @param {string} props.buttonLabels.language
+ * @param {string} props.buttonLabels.purchase
+ * @param {function(object):void} props.onClickLangButton
+ */
+
+const Navbar = ({ links, buttonLabels, onClickLangButton }) => {
   const [active, setActive] = useState(false);
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -29,31 +38,22 @@ const Navbar = () => {
 
         <div id="navMenu" className={`navbar-menu ${active ? 'is-active' : ''}`}>
           <div className="navbar-start">
-            <Link className="navbar-item" to="/news/">
-              お知らせ
-            </Link>
-            <Link className="navbar-item" to="/products/">
-              本の紹介
-            </Link>
-            <Link className="navbar-item" to="/about/">
-              DX出版とは
-            </Link>
-            <Link className="navbar-item" to="/contact/">
-              問い合わせ
-            </Link>
+            {
+              links.map(link => (
+                <Link className="navbar-item" to={link.to} key={link.to}>
+                  { link.label }
+                </Link>
+              ))
+            }
           </div>
 
           <div className="navbar-end">
-            {
-              /**
-               * <button className="navbar-item" onClick={() => console.log('english')}>
-               *   English
-               * </button>
-               * */
-            }
+            <button className="navbar-item" onClick={(e) => onClickLangButton(e)}>
+              { buttonLabels.language }
+            </button>
             <div className="navbar-item">
               <div className="buttons">
-                <PurchaseLink color="primary" url="https://www.amazon.co.jp/s?k=DX%E5%87%BA%E7%89%88&rh=n%3A2229003051" />
+                <PurchaseLink label={buttonLabels.purchase} color="primary" url="https://www.amazon.co.jp/s?k=DX%E5%87%BA%E7%89%88&rh=n%3A2229003051" />
               </div>
             </div>
           </div>
