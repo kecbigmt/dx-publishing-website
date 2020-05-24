@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Layout from './Layout'
 import BreadCrumbList from './BreadCrumbList'
 import SEO from './seo'
+import LocaleContext from '../context/LocaleContext'
 
 const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, localeSet, children }) => (
   <Layout
@@ -12,6 +13,7 @@ const PageLayout = ({ title, ogpImage, breadcrumbs, description, hero, localeSet
       title={title}
       description={description}
       ogpImage={ogpImage}
+      lang={useContext(LocaleContext).locale}
     />
     { hero }
     <section className="section bc-background">

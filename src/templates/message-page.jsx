@@ -17,6 +17,7 @@ const MessagePage = ({ data, pageContext }) => {
       <SEO
         title={frontmatter.title}
         description={frontmatter.description || undefined}
+        lang={locale}
       />
       <section className={['hero', 'is-fullheight', frontmatter.color ? `is-${frontmatter.color}` : 'is-light'].join(' ')}>
         <div className="hero-body">

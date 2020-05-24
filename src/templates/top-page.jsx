@@ -18,7 +18,9 @@ const IndexPage = ({ data, pageContext }) => {
   const { localeSet } = pageContext
   return (
     <Layout localeSet={localeSet}>
-      <SEO />
+      <SEO 
+        lang={locale}
+      />
       <PageCover
         title={frontmatter.cover.title}
         subtitle={frontmatter.cover.subtitle}
