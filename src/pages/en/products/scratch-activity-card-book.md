@@ -29,7 +29,7 @@ books:
       * Let's Dance: You can experience making dance scene animations that arrange music and dance choreography.
   -
     title: Create a Story / Video Sensing
-    meta: ""Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Language: Japanese / ISBN-13: 9784910209036 / Pages: 44 / Printing: Color / Dimensions: 210mm x 148mm x 3mm / Issue date: May 15, 2020 / Publisher: DX Publishing / Price: 770JPY without TAX"
+    meta: "Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Language: Japanese / ISBN-13: 9784910209036 / Pages: 44 / Printing: Color / Dimensions: 210mm x 148mm x 3mm / Issue date: May 15, 2020 / Publisher: DX Publishing / Price: 770JPY without TAX"
     image: ../../../images/scratch-activity-card-book/vol3.png
     purchaseUrl: https://www.amazon.co.jp/dp/4910209034 
     purchaseAltLabel: "" 
@@ -39,7 +39,7 @@ books:
       * Video Sensing: You can magine futre devices by creating projects that respond to video motion sensor.
   -
     title: Game version
-    meta:"Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Language: Japanese / ISBN-13: 9784910209043 / Pages: 76 / Printing: Color / Dimensions: 210mm x 148mm x 5mm / Issue date: May 15, 2020 / Publisher: DX Publishing / Price: 1,050JPY without TAX"
+    meta: "Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Language: Japanese / ISBN-13: 9784910209043 / Pages: 76 / Printing: Color / Dimensions: 210mm x 148mm x 5mm / Issue date: May 15, 2020 / Publisher: DX Publishing / Price: 1,050JPY without TAX"
     image: ../../../images/scratch-activity-card-book/vol4.png
     purchaseUrl: https://www.amazon.co.jp/dp/4910209042 
     purchaseAltLabel: ""
