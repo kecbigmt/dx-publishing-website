@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
+import { navigate, useLocation } from '@reach/router'
 
 import LocaleContext from '../context/LocaleContext'
 import Navbar from './Navbar'
 import './all.sass'
+import { useEffect } from 'react'
 
 /**
  * Layout Component
@@ -25,13 +27,29 @@ const Layout = ({ children, localeSet }) => {
     language: localeSet[locale].label.button.language,
     purchase: localeSet[locale].label.button.purchase,
   }
+
+  const { pathname } = useLocation()
+  // localeが変わったらパスを変更
+  useEffect(() => {
+    if (pathname.startsWith('/ja') || pathname.startsWith('/en')) {
+      navigate(`/${locale}${pathname.slice(3)}`)
+    }
+  }, [locale])
+
+  const onClickLangButton = () => {
+    if (locale === 'ja') {
+      setLocale('en')
+    } else {
+      setLocale('ja')
+    }
+  }
       
   return (
     <>
       <Navbar
         links={links}
         buttonLabels={buttonLabels}
-        onClickLangButton={() => locale === 'ja' ? setLocale('en') : setLocale('ja')}
+        onClickLangButton={onClickLangButton}
       />
       { children }
       <footer className="footer">
