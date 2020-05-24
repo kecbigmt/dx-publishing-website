@@ -9,9 +9,9 @@ featured:
   title: Scratch Activity Card Book Series
   description: Card book for programming learning that brings "Creative learning" to children. It helps children concentrate on programming with Scratch.
   features:
-    - Contains state-of-the-art programming learning materials developed by the Scratch Team (scratch.mit.edu) .
-    - The long-awaited scratch 3.0 compatible coding card
-    - It is ideal for educational materials in elementary schools and after-school programs.
+    - Coding cards developed by the Scratch Team (scratch.mit.edu) are included.
+    - Scratch 3.0 compatible
+    - For education in elementary schools and after-school programs.
   link: /en/products/scratch-activity-card-book
   books:
     -
