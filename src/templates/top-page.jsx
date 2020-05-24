@@ -74,7 +74,7 @@ const IndexPage = ({ data, pageContext }) => {
           {
             posts.length > 3 &&
               <footer className="section-footer">
-                <NewsListLink color="primary" to="/news/" />
+                <NewsListLink label={localeSet[locale].label.button.newsList} color="primary" to="/news/" />
               </footer>
           }
         </div>
