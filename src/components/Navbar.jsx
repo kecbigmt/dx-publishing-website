@@ -7,19 +7,20 @@ import Logo from '../images/logo.svg'
 /**
  * Navbar component
  * @param {Object} props
+ * @param {string} props.logoSrc
  * @param {Array.<{to: string; label: string}>} props.links
  * @param {string} props.buttonLabels.language
  * @param {string} props.buttonLabels.purchase
  * @param {function(object):void} props.onClickLangButton
  */
 
-const Navbar = ({ links, buttonLabels, onClickLangButton }) => {
+const Navbar = ({ logoSrc, links, buttonLabels, onClickLangButton }) => {
   const [active, setActive] = useState(false);
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src={Logo} width="124" height="32" alt="logo" />
+            <img src={logoSrc} height="32" alt="logo" />
           </Link>
 
           <button

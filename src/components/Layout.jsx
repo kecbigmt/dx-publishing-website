@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { navigate, useLocation } from '@reach/router'
 
 import LocaleContext from '../context/LocaleContext'
 import Navbar from './Navbar'
+import LogoJa from '../images/logo_ja.svg'
+import LogoEn from '../images/logo_en.svg'
 import './all.sass'
-import { useEffect } from 'react'
 
 /**
  * Layout Component
@@ -47,6 +48,7 @@ const Layout = ({ children, localeSet }) => {
   return (
     <>
       <Navbar
+        logoSrc={locale === 'en' ? LogoEn : LogoJa}
         links={links}
         buttonLabels={buttonLabels}
         onClickLangButton={onClickLangButton}
