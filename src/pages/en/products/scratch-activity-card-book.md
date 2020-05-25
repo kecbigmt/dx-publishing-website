@@ -52,7 +52,7 @@ books:
   -
     title: Getting Started with Scratch
     meta: "Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Language: Japanese / ISBN-13: 9784910209005 / Pages: 48 / Printing: Color / Dimensions: 210mm x 148mm x 3mm / Publiciation Plan: Mid-Jun, 2020 / Publisher: DX Publishing / Price: 770JPY without TAX"
-    image: ../../../images/scratch-activity-card-book/vol4.png
+    image: ../../../images/scratch-activity-card-book/beginner.png
     purchaseUrl: "" 
     purchaseAltLabel: Publiciation Plan Jun 2020
     description___md: |
