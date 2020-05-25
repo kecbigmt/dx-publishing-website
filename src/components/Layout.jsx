@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { navigate, useLocation } from '@reach/router'
 
@@ -30,12 +30,16 @@ const Layout = ({ children, localeSet }) => {
   }
 
   const { pathname } = useLocation()
+  const [langButtonTo, setLangButtonTo] = useState(pathname)
   // localeが変わったらパスを変更
   useEffect(() => {
-    if (pathname.startsWith('/ja') || pathname.startsWith('/en')) {
-      navigate(`/${locale}${pathname.slice(3)}`)
+    if (pathname.startsWith('/ja')) {
+      setLangButtonTo(`/en${pathname.slice(3)}`)
     }
-  }, [locale, pathname])
+    if (pathname.startsWith('/en')) {
+      setLangButtonTo(`/ja${pathname.slice(3)}`)
+    }
+  }, [pathname])
 
   const onClickLangButton = () => {
     if (locale === 'ja') {
@@ -51,6 +55,7 @@ const Layout = ({ children, localeSet }) => {
         logoSrc={locale === 'en' ? LogoEn : LogoJa}
         links={links}
         buttonLabels={buttonLabels}
+        langButtonTo={langButtonTo}
         onClickLangButton={onClickLangButton}
       />
       { children }

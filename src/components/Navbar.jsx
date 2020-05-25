@@ -10,10 +10,11 @@ import { PurchaseLink } from './Button'
  * @param {Array.<{to: string; label: string}>} props.links
  * @param {string} props.buttonLabels.language
  * @param {string} props.buttonLabels.purchase
+ * @param {string} props.langButtonTo
  * @param {function(object):void} props.onClickLangButton
  */
 
-const Navbar = ({ logoSrc, links, buttonLabels, onClickLangButton }) => {
+const Navbar = ({ logoSrc, links, buttonLabels, langButtonTo, onClickLangButton }) => {
   const [active, setActive] = useState(false);
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -48,9 +49,9 @@ const Navbar = ({ logoSrc, links, buttonLabels, onClickLangButton }) => {
           </div>
 
           <div className="navbar-end">
-            <button className="navbar-item" onClick={(e) => onClickLangButton(e)}>
+            <Link className="navbar-item" to={langButtonTo} onClick={(e) => onClickLangButton(e)}>
               { buttonLabels.language }
-            </button>
+            </Link>
             <div className="navbar-item">
               <div className="buttons">
                 <PurchaseLink label={buttonLabels.purchase} color="primary" url="https://www.amazon.co.jp/s?k=DX%E5%87%BA%E7%89%88&rh=n%3A2229003051" />
