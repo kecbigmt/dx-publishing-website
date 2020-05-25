@@ -33,14 +33,15 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'butto
           color === 'dark' ? 'is-dark' : color === 'secondary' ? 'is-secondary' : 'is-primary',
           size === 'small' ? 'is-small' : 'is-normal',
           className,
-        ].join(' ')} 
-        href={url} 
-        onClick={onClick} 
-        to={to}
-        target={ tag === 'a' ? '_blank' : undefined}
-        rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
-        type={ tag === 'button' ? type : undefined }
-        disabled={disabled ? true : undefined}
+        ].join(' ')
+      } 
+      href={url} 
+      onClick={onClick} 
+      to={to}
+      target={ tag === 'a' ? '_blank' : undefined}
+      rel={ tag === 'a' ? 'noopener noreferrer' : undefined}
+      type={ tag === 'button' ? type : undefined }
+      disabled={disabled ? true : undefined}
     >
       {
         label && <span>{ label }</span>
@@ -64,7 +65,7 @@ const Button = ({ tag, color, label, icon, url, to, onClick, size, type = 'butto
  * @param {string} [props.className] 
  */
 export const PurchaseLink = (props) => (
-  <Button tag='a' label='通販サイト' icon='external' {...props}/>
+  <Button tag='a' label={props.label} icon='external' {...props}/>
 )
 
 /**
@@ -76,19 +77,20 @@ export const PurchaseLink = (props) => (
  * @param {string} [props.className] 
  */
 export const PurchaseAltButton = (props) => (
-  <Button tag="button" label={props.label || '通販サイト'} icon={props.label ? undefined : 'external'} disabled={true} {...props} />
+  <Button tag="button" label={props.label} icon={props.label ? undefined : 'external'} disabled={true} {...props} />
 )
 
 /**
  * MoreDetailLink
  * @param {Object} props
  * @param {('primary'|'secondary'|'dark')} props.color 'primary' or 'secondary' or 'dark'
+ * @param {string} [props.url]
  * @param {to} props.to
  * @param {'normal'|'small'} [props.size] default: normal
  * @param {string} [props.className] 
  */
 export const MoreDetailLink = (props) => (
-  <Button tag="Link" label="もっと詳しく" icon="more" {...props}/>
+  <Button tag="Link" label={props.label || 'もっと詳しく'} icon="more" {...props}/>
 )
 
 /**
@@ -100,7 +102,7 @@ export const MoreDetailLink = (props) => (
  * @param {string} [props.className] 
  */
 export const NewsListLink = (props) => (
-  <Button tag="Link" label="お知らせ一覧" icon="more" {...props}/>
+  <Button tag="Link" label={props.label} icon="more" {...props}/>
 )
 
 /**
@@ -112,7 +114,7 @@ export const NewsListLink = (props) => (
  * @param {string} [props.className] 
  */
 export const SubmitButton = (props) => (
-  <Button tag="button" type="submit" label="送信" icon="submit" {...props}/>
+  <Button tag="button" type="submit" label={props.label} icon="submit" {...props}/>
 )
 
 
@@ -125,5 +127,5 @@ export const SubmitButton = (props) => (
  * @param {string} [props.className] 
  */
 export const ToTopButton = (props) => (
-  <Button tag="Link" label="トップページに移動" icon="more" to="/" {...props}/>
+  <Button tag="Link" label={props.label} icon="more" to="/" {...props}/>
 )

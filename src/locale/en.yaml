@@ -1,0 +1,29 @@
+label:
+  navigation:
+    top: Top
+    news: News
+    products: Products
+    about: About
+    contact: Contact
+  button:
+    language: 日本語
+    purchase: Purchase
+    more: More
+    newsList: See More
+    submit: Submit
+    toTop: Move to Top Page
+  section:
+    news: News
+    productDetails: Product Details
+  contactForm:
+    name: Name
+    email: E-mail
+    tel: Tel
+    company: Company/School/Group
+    message: Message
+  alert:
+    error: An error has occurred
+    failToSubmit: Failed to submit
+  badge:
+    required: Required
+    optional: Optional

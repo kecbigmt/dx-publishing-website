@@ -1,0 +1,29 @@
+label:
+  navigation:
+    top: トップ
+    news: お知らせ
+    products: 本の紹介
+    about: DX出版とは
+    contact: 問い合わせ
+  button:
+    language: English
+    purchase: 通販サイト
+    more: もっと詳しく
+    newsList: ニュース一覧
+    submit: 送信
+    toTop: トップページに移動
+  section:
+    news: お知らせ
+    productDetails: 書誌情報・通販
+  contactForm:
+    name: お名前
+    email: メールアドレス
+    tel: 電話番号
+    company: 会社名/学校名/所属名
+    message: お問い合わせ内容
+  alert:
+    error: エラーが発生しました
+    failToSubmit: 送信に失敗しました
+  badge:
+    required: 必須
+    optional: 任意

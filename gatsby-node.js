@@ -10,8 +10,20 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const remark = require('remark')
 const remarkHTML = require('remark-html')
+const yaml = require('js-yaml')
+const fs = require('fs')
 
 exports.createPages = async ({ actions, graphql }) => {
+  let localeSet = {
+    ja: {},
+    en: {},
+  }
+  try {
+    localeSet.ja = yaml.safeLoad(fs.readFileSync('./src/locale/ja.yaml', 'utf8'))
+    localeSet.en = yaml.safeLoad(fs.readFileSync('./src/locale/en.yaml', 'utf8'))
+  } catch(e) {
+    console.error(e)
+  }
   const { createPage } = actions
 
   const result = await graphql(`
@@ -47,20 +59,31 @@ exports.createPages = async ({ actions, graphql }) => {
       return [] 
     }
     const current = slug.slice(0, currentIndex + 1)
-    return [{ label: slugDict[current], to: current }, ...makeBreadcrumbs(slug, currentIndex)]
+    return slugDict[current] ? [{ label: slugDict[current], to: current }, ...makeBreadcrumbs(slug, currentIndex)] : [...makeBreadcrumbs(slug, currentIndex)]
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     if (['news-page', 'news-post', 'static-page', 'top-page', 'product-item', 'products-page', 'contact-page', 'message-page'].includes(node.fields.frontmatter.templateKey)) {
-      const breadcrumbs = makeBreadcrumbs(node.fields.slug)
+      const slug = node.fields.slug
+      const locale = slug.startsWith('/ja') ? 'ja'
+                      : slug.startsWith('/en') ? 'en'
+                      : ''
+      const breadcrumbs = makeBreadcrumbs(slug)
+
       createPage({
         path: node.fields.slug,
         component: path.resolve(`src/templates/${node.fields.frontmatter.templateKey}.jsx`),
         context: {
           id: node.id,
-          slug: node.fields.slug,
+          localeRegex: `/\/${locale}\//`,
+          slug,
+          slugDict,
           breadcrumbs,
-        }
+          localeSet: {
+            ja: localeSet.ja,
+            en: localeSet.en,
+          },
+        },
       })
     }
   })

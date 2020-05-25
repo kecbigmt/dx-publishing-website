@@ -15,6 +15,7 @@ const NewsPost = ({ data, pageContext }) => {
       description={fields.frontmatter.description}
       ogpImage={fields.frontmatter.featuredImage.childImageSharp.fluid.src}
       breadcrumbs={pageContext.breadcrumbs}
+      localeSet={pageContext.localeSet}
     >
       <article className="box article">
         <PageHeader
