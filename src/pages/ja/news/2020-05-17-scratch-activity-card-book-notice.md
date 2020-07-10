@@ -24,7 +24,7 @@ Vol.2とVol.3は、MITメディアラボのScratchチームが公開している
 
 ## 今後の予定
 
-6月中旬に初心者入門編を発刊予定です。
+8月中旬に初心者入門編を発刊予定です（6月中旬から延期となりました）。
 
 シリーズ全体や各巻の詳細については、「[本の紹介/Scratchアクティビティ カードブック・シリーズ](https://dx-publishing.jp/products/scratch-activity-card-book/)」でご覧いただけます。
 
