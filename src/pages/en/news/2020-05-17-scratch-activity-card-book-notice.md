@@ -23,7 +23,7 @@ go to [Amazon](https://www.amazon.co.jp/s?k=DX出版&rh=n%3A2229003051&__mk_ja_J
 
 ## Coming Soon
 
-The ”Getting Started with Scratch” will be published in mid-Jun, 2020.
+The ”Getting Started with Scratch” will be published in mid-August, 2020.
 
 If you would like to see the details, please go to "[Product/Scratch ASctivity Card Book Series](https://dx-publishing.jp/products/scratch-activity-card-book/)".
 
