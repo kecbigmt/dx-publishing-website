@@ -54,7 +54,7 @@ books:
     meta: "Author: Natalie Rusk, Scratch Team / Translator: Tetsushiro Oyama / Language: Japanese / ISBN-13: 9784910209005 / Pages: 48 / Printing: Color / Dimensions: 210mm x 148mm x 3mm / Publiciation Plan: Mid-Jun, 2020 / Publisher: DX Publishing / Price: 770JPY without TAX"
     image: ../../../images/scratch-activity-card-book/beginner.png
     purchaseUrl: "" 
-    purchaseAltLabel: Publiciation Plan Jun 2020
+    purchaseAltLabel: Publiciation Plan August 2020
     description___md: |
       **Scratch Beginner's Guide**
       * You can understand the operation method gently so that you can create a simple project.
