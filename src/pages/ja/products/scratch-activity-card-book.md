@@ -54,7 +54,7 @@ books:
     meta: 著者：ナタリー・ラスク、Scratchチーム / 翻訳：大山哲志郎 / 発行予定日：2020年6月中旬 / サイズ・仕様：A5・フルカラー・48ページ / ISBN：9784910209005、予定価格：770円＋税
     image: ../../../images/scratch-activity-card-book/beginner.png
     purchaseUrl: "" 
-    purchaseAltLabel: ６月中旬発売予定
+    purchaseAltLabel: 8月中旬発売予定
     description___md: |
       **Scratch初心者向けガイド**
       * 簡単なプロジェクトを作成できるように優しく操作方法を説明します
